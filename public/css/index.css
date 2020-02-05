@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+}
+.container{
+    background-color: #E3E4E0;
+}
+
+.topNav{
+    padding: 0.5rem;
+    height: 3rem;
+    background-color: #C7C7BB;
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading{
+    color: #7F867B;
+}
+
+.setting{
+    color: #7F867B;
+}
+
+.topInfo{
+    padding: 0.5rem;
+    height: 3rem;
+}
+
+.topInfo p{
+    float: right;
+    color: #7F867B;
+}
+.works{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 250px;
+    height: 250px;
+}
+
+
+.buttonContainer a{
+    margin: 10px auto;
+    padding: 0.5rem;
+    display: block;
+    border: solid 2px #7F867B;
+    border-radius: 5px;
+    width: 10rem;
+    text-align: center;
+    color: #7F867B;
+}
+
+.buttonContainer button{
+    margin: 10px auto;
+    padding: 0.5rem;
+    display: block;
+    border: solid 2px #7F867B;
+    border-radius: 5px;
+    width: 10rem;
+}
+
+.buttonContainer p{
+    text-align: center;
+    color: #7F867B;
+}
+
+.bottomNav{
+    padding: 0.5rem;
+    height: 5rem;
+    background-color: #C7C7BB;
+}
+
+.buttonContainer2{
+    display: flex;
+    justify-content: space-between;
+}
+.buttonContainer2 a{
+    margin: 10px auto;
+    padding: 0.5rem;
+    border: solid 2px #7F867B;
+    border-radius: 5px;
+    width: 10rem;
+    text-align: center;
+    color: #7F867B;
+}
+
+/* for givefeedback page */
+.title{
+    color: #7F867B;
+}
+
+form { 
+    margin: 0 auto; 
+    width: 300px;
+}
+
+form #submit{
+    margin: auto;
+}
+h1{
+    text-align: center;
+}
