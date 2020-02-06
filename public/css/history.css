@@ -1,3 +1,29 @@
 .title{
     color: #7F867B;
 }
+
+
+.feedbackType {
+	background-color: #FFF2DE;
+	width: 250px;
+	height: 150px;
+	margin: 0 auto;
+	margin-bottom: 25px;
+	border: solid 2px #7F867B;
+    border-radius: 5px;
+    color: #7F867B;
+}
+
+
+.subBody a{
+	display: flex;
+	justify-content: center;
+}
+
+.subBody p{
+	text-align: center;
+}
+
+.category {
+	text-align: center;
+}
