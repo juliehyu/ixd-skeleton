@@ -102,3 +102,10 @@ form #submit{
 h1{
     text-align: center;
 }
+
+/* For link */
+a {
+    text-decoration: none;
+    color: #7F867B;
+
+}
