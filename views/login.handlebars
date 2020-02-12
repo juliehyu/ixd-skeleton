@@ -1,0 +1,27 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="css/main.css" rel="stylesheet"></link>
+	<link href="css/profile.css" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/5475b02c18.js" crossorigin="anonymous"></script>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{> facebook}}
+	<script src="js/facebook.js"></script>
+	<title>Dconstruct</title>
+</head>
+<body>
+{{!-- <div id="fb-root"></div> --}}
+{{!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=772757316541625&autoLogAppEvents=1"></script> --}}
+<div class="container" id="login">
+    <img src="source/D.png" id="logo"/>
+
+    <h2 class="title" id="welcome">Welcome to Dconstruct!</h2>
+    <p id="subwelcome">Share your work and get great feedback here.</p>
+    
+    <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="false" scope="public_profile,email" onlogin="checkLoginState();"></div>
+    <p class="facebookLogin">Please login through Facebook</p>
+</div>
+</body>
+</html>

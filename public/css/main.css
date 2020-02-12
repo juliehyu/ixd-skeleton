@@ -1,0 +1,228 @@
+html {
+    overflow: hidden;
+    background-size: cover;
+    height: 100%;
+}
+
+body {
+    font-family: 'Old Standard TT', serif;
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+}
+
+.container{
+    background-color: #E3E4E0;
+}
+
+#login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: #E3E4E0; /* Just to visualize the extent */
+    margin: auto;
+    text-align: center;
+}
+
+.topNav{
+    padding: 0.5rem;
+    height: 3rem;
+    background-color: #C7C7BB;
+    display: flex;
+    align-items: center;
+    color: #7F867B;
+    vertical-align: middle;
+}
+
+
+#s-logo{
+    width: 3rem;
+    height: 3rem;
+}
+
+.dconstruct{
+    margin: auto;
+}
+
+.profile{
+    display: flex;
+    position: absolute;
+    margin-left: 87%;
+}
+
+.left{  
+    margin-right: auto;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.right{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.right i{
+    margin-left: 1.5rem;
+}
+.topInfo{
+    padding: 0.5rem;
+    height: 3rem;
+}
+
+.topInfo p{
+    float: right;
+    color: #7F867B;
+}
+.works{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 250px;
+    height: 250px;
+}
+
+
+.buttonContainer a{
+    margin: 10px auto;
+    padding: 0.5rem;
+    display: block;
+    border: solid 2px #7F867B;
+    border-radius: 5px;
+    width: 10rem;
+    text-align: center;
+    color: #7F867B;
+}
+
+.buttonContainer button{
+    margin: 10px auto;
+    padding: 0.5rem;
+    display: block;
+    border: solid 2px #7F867B;
+    border-radius: 5px;
+    width: 10rem;
+}
+
+.buttonContainer p{
+    text-align: center;
+    color: #7F867B;
+}
+
+/* Dummy divs */
+.topper{
+    height: 5rem;
+    background-color: #E3E4E0;
+}
+.footer{
+    height: 10rem;
+    background-color: #E3E4E0;
+}
+
+
+/* Star balance */
+.starbalance{
+    overflow: hidden;
+    background-color: #D4C8BE;;
+    position: fixed; 
+    bottom: 3rem; 
+    width: 100%; 
+    color: #AF9F84;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.starcenter{
+    height: 3rem;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    vertical-align: middle;
+    justify-content: space-between;
+}
+
+.starcenter p{
+    margin-left: 0.6rem;
+}
+
+.starcenter .right p{
+    font-weight: 800;
+}
+.fa-star{
+    color: rgb(153, 134, 102);
+}
+/* Navigation bar */
+.bottomNav{
+    height: 3rem;
+    overflow: hidden;
+    background-color: #C7C7BB;;
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.bottomNav a{
+
+    float: center;
+    display: block;
+    color: #7F867B;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+}
+
+.bottomNav a:hover {
+    background: #ddd;
+    color: black;
+}
+
+
+.title{
+    color: #7F867B;
+}
+
+
+form { 
+    margin: 0 auto; 
+    width: 300px;
+}
+
+form #submit{
+    margin: auto;
+}
+h1{
+    text-align: center;
+}
+
+/* For link */
+a {
+    text-decoration: none;
+    color: #7F867B;
+
+}
+
+
+/* Login Page */
+#welcome{
+    margin-bottom: 0.5rem;
+}
+
+#subwelcome{
+    margin-bottom: 5rem;
+}
+
+#logo{
+    width: 10rem;
+    height: 10rem;
+    margin-top: 12rem;
+    margin-bottom: 2rem;
+}
+
