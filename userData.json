@@ -1,0 +1,16 @@
+{
+	"users":[
+		{
+			"userID": "julieyuu",
+			"email": "julieyu97@gmail.com",
+			"stars": 5,
+			"skips": 3
+		},
+		{
+			"userID": "dummyUser",
+			"email": "cogs120dummyuser@gmail.com",
+			"stars": 5,
+			"skips": 3
+		}
+	]
+}
