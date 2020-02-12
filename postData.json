@@ -1,0 +1,88 @@
+{
+	"posts": [
+		{
+			"userID": "julieyuu",
+			"category": "photography",
+			"image": "images/julieyuu_1.jpg",
+			"question": "Does my photo have too much grain?",
+			"prompt": ""
+		},
+		{
+			"userID": "joeshky",
+			"category": "photography",
+			"image": "images/joeshky_1.jpg",
+			"question": "How is my cropping for this photo?",
+			"prompt": ""
+		},
+		{
+			"userID": "yujiheid",
+			"category": "photography",
+			"image": "images/yujiheid_1.jpg",
+			"question": "How are the colors in this? Too saturated? Too orange?",
+			"prompt": ""
+		},
+		{
+			"userID": "martitacrazy",
+			"category": "photography",
+			"image": "images/martitacrazy_1.jpg",
+			"question": "Opinions on how this photo makes you feel please.",
+			"prompt": ""
+		},
+		{
+			"userID": "julieyuu_",
+			"category": "photography",
+			"image": "images/julieyuu_2.jpg",
+			"question": "Is framining of the subject fine in the photo?",
+			"prompt": ""
+		},
+		{
+			"userID": "norito-m",
+			"category": "photography",
+			"image": "images/norito-m_1.jpg",
+			"question": "Is the bottom half of the photo too bright?",
+			"prompt": ""
+		},
+		{
+			"userID": "sabrinaflowers",
+			"category": "photography",
+			"image": "images/sabrinaflowers_1.jpg",
+			"question": "How is my coloring for the skin tone of the subject?",
+			"prompt": ""
+		},
+		{
+			"userID": "pablonavarrob",
+			"category": "photography",
+			"image": "images/pablonavarrob_1.jpg",
+			"question": "Is the shadow of the palm tree distracting?",
+			"prompt": ""
+		},
+		{
+			"userID": "24bucks",
+			"category": "photography",
+			"image": "images/24bucks_1.jpg",
+			"question": "Opinions needed on the choice of bluring the front hand please.",
+			"prompt": ""
+		},
+		{
+			"userID": "maishoua",
+			"category": "photography",
+			"image": "images/maishoua_1.jpg",
+			"question": "Interested in hearing your perspective of the story behind this photo!",
+			"prompt": ""
+		},
+		{
+			"userID": "jenannro",
+			"category": "photography",
+			"image": "images/jenannro_1.jpg",
+			"question": "How well was the contrast edited in this photo?",
+			"prompt": ""
+		},
+		{
+			"userID": "yujiheid",
+			"category": "photography",
+			"image": "images/yujiheid_2.jpg",
+			"question": "What type of feelings do you get from looking at this photo?",
+			"prompt": ""
+		}
+	]
+}
