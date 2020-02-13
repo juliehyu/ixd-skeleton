@@ -48,9 +48,15 @@ body {
 }
 
 .profile{
-    display: flex;
-    position: absolute;
-    margin-left: 87%;
+  position: absolute;
+  top: 17px;
+  right: 17px;
+}
+
+.profile2{
+  position: absolute;
+  top: 17px;
+  left: 17px;
 }
 
 .left{  
@@ -86,6 +92,8 @@ body {
     display: block;
     width: 250px;
     height: 250px;
+    border: 0.01em solid black;
+    border-radius: 5%;
 }
 
 
@@ -160,7 +168,7 @@ body {
 .bottomNav{
     height: 3rem;
     overflow: hidden;
-    background-color: #C7C7BB;;
+    background-color: #C7C7BB;
     position: fixed; 
     bottom: 0; 
     width: 100%; 
