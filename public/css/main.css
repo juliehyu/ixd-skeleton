@@ -214,7 +214,6 @@ h1{
 a {
     text-decoration: none;
     color: #7F867B;
-
 }
 
 
@@ -233,4 +232,10 @@ a {
     margin-top: 12rem;
     margin-bottom: 2rem;
 }
+
+.dropdown-menu-center {
+  float: none;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);}
 
