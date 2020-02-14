@@ -1,100 +1,67 @@
 {
 	"posts": [
 		{
+			"no": "1",
 			"userID": "julieyuu",
 			"category": "photography",
-			"image": "images/julieyuu_1.jpg",
+			"image": "source/images/julieyuu_2.jpg",
 			"question": "Does my photo have too much grain?",
 			"prompt": "",
 			"postID": 1
 		},
 		{
+			"no": "2",
 			"userID": "joeshky",
 			"category": "photography",
-			"image": "images/joeshky_1.jpg",
+			"image": "source/images/joeshky_1.jpg",
 			"question": "How is my cropping for this photo?",
 			"prompt": "",
 			"postID": 1
 		},
 		{
+			"no": "3",
 			"userID": "yujiheid",
 			"category": "photography",
-			"image": "images/yujiheid_1.jpg",
+			"image": "source/images/yujiheid_1.jpg",
 			"question": "How are the colors in this? Too saturated? Too orange?",
 			"prompt": "",
 			"postID": 1
 		},
 		{
+			"no": "4",
 			"userID": "martitacrazy",
 			"category": "photography",
-			"image": "images/martitacrazy_1.jpg",
+			"image": "source/images/martitacrazy_1.jpg",
 			"question": "Opinions on how this photo makes you feel please.",
 			"prompt": "",
 			"postID": 1
 		},
 		{
-			"userID": "julieyuu_",
+			"no": "5",
+			"userID": "martitacrazy",
 			"category": "photography",
-			"image": "images/julieyuu_2.jpg",
-			"question": "Is framining of the subject fine in the photo?",
-			"prompt": "",
-			"postID": 2
-		},
-		{
-			"userID": "norito-m",
-			"category": "photography",
-			"image": "images/norito-m_1.jpg",
-			"question": "Is the bottom half of the photo too bright?",
+			"image": "source/images/martitacrazy_1.jpg",
+			"question": "Opinions on how this photo makes you feel please.",
 			"prompt": "",
 			"postID": 1
 		},
 		{
-			"userID": "sabrinaflowers",
+			"no": "6",
+			"userID": "martitacrazy",
 			"category": "photography",
-			"image": "images/sabrinaflowers_1.jpg",
-			"question": "How is my coloring for the skin tone of the subject?",
+			"image": "source/images/martitacrazy_1.jpg",
+			"question": "Opinions on how this photo makes you feel please.",
 			"prompt": "",
 			"postID": 1
 		},
 		{
-			"userID": "pablonavarrob",
+			"no": "7",
+			"userID": "martitacrazy",
 			"category": "photography",
-			"image": "images/pablonavarrob_1.jpg",
-			"question": "Is the shadow of the palm tree distracting?",
+			"image": "source/images/martitacrazy_1.jpg",
+			"question": "Opinions on how this photo makes you feel please.",
 			"prompt": "",
 			"postID": 1
-		},
-		{
-			"userID": "24bucks",
-			"category": "photography",
-			"image": "images/24bucks_1.jpg",
-			"question": "Opinions needed on the choice of bluring the front hand please.",
-			"prompt": "",
-			"postID": 1
-		},
-		{
-			"userID": "maishoua",
-			"category": "photography",
-			"image": "images/maishoua_1.jpg",
-			"question": "Interested in hearing your perspective of the story behind this photo!",
-			"prompt": "",
-			"postID": 1
-		},
-		{
-			"userID": "jenannro",
-			"category": "photography",
-			"image": "images/jenannro_1.jpg",
-			"question": "How well was the contrast edited in this photo?",
-			"prompt": "",
-			"postID": 1
-		},
-		{
-			"userID": "yujiheid",
-			"category": "photography",
-			"image": "images/yujiheid_2.jpg",
-			"question": "What type of feelings do you get from looking at this photo?",
-			"prompt": "",
-			"postID": 2
 		}
 	]
 }

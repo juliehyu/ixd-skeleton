@@ -5,6 +5,8 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/main.js"></script>
 	<title>Dconstruct</title>
 </head>
 <body>
@@ -34,40 +36,35 @@
 	    	<li data-target="#myCarousel" data-slide-to="1"></li>
 	    	<li data-target="#myCarousel" data-slide-to="2"></li>
 	 	</ol> -->
+		
 		<div class="carousel-inner works">
-			<div class="item active">
-				<img src="source/images/24bucks_1.jpg">
-			</div>
-			<div class="item">
-				<img src="source/images/jenannro_1.jpg">
-			</div>
-			<div class="item">
-				<img src="source/images/joeshky_1.jpg">
-			</div>
-			<div class="item">
-				<img src="source/images/joeshky_1.jpg">
-			</div>
+			{{#each posts}}
+				<div class="item" id={{no}}>
+					<img src={{image}}>
+					<p>{{question}}</p>
+				</div>
+			{{/each}}
 		</div>
+		
 	</div>
 
 	<div class="text-center">
 		<button type="button" class="btn btn-primary">
-		  	<a href="/givefeedback" style="color:white" href="/main">Give Feedback</a>
+		  	<a style="color:white" id="linkToGiveFeedback">Give Feedback</a>
 		</button>
 		<br>
 		<br>
-		<button type="button" class="btn btn-info">
+		<button type="button" class="btn btn-info" id="skip">
 			<a style="color:white" href="#myCarousel" data-slide="next">
 			Skip [3 Remaining]</a>
 		</button>
 	</div>
 
-  <div class="bottomNav" style="height: 5rem;">
+  {{!-- <div class="bottomNav" style="height: 5rem;">
     <a href="/main"><i class="fas fa-lg fa-home"></i></a>
     <a href="/history"><i class="fas fa-lg fa-history"></i></a>
     <a href="/upload"><i class="fas fa-lg fa-plus-square"></i></a>
-    {{!-- <a href="/profile"><i class="fas fa-lg fa-th"></i></a> --}}
-  </div>
+  </div> --}}
 
 </div>
 	<script src="https://code.jquery.com/jquery.js"></script>

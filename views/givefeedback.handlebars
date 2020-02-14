@@ -2,50 +2,47 @@
 <head>
 	<script src="https://kit.fontawesome.com/5475b02c18.js" crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
-
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="../js/givefeedback.js"></script>
 	<title>Dconstruct</title>
 </head>
 <body>
 	<nav class="navbar fixed-top topNav navbar-light bg-light">
   		<a class="dconstruct"  href="#" >
-  			<img src="source/D.png" id="s-logo" width="30" height="30"/>
+  			<img src="../source/D.png" id="s-logo" width="30" height="30"/>
   		</a>
 	</nav>
 
 	<h1 class="title">Give Feedback</h1>
 
 	<div>
-		<img class="works" src="source/images/24bucks_1.jpg"></img>
+		<img class="works" src={{image}}>
 	</div>
 
-	<form>
+	<form target="_blank" id="addFriendForm" role="form" method="get" action="/givefeedback" onsubmit="window.location.href = '/main';">
 	  <div class="form-group">
 	    <label for="textResponse1">User Question</label>
-	    <textarea class="form-control" id="textResponse1" rows="2"></textarea>
+	    <input class="form-control" id="textResponse1" rows="2" name="answer1"></input>
 	  </div>
 	  <div class="form-group">
 	    <label for="textResponse2">Prompt Question #1</label>
-	    <textarea class="form-control" id="textResponse2" rows="2"></textarea>
+	    <input class="form-control" id="textResponse2" rows="2" name="answer2"></input>
 	  </div>
-	  <div class="form-group">
-	    <label for="textResponse3">Prompt Question #2</label>
-	    <textarea class="form-control" id="textResponse3" rows="2"></textarea>
-	  </div>
-	  <button type="button" class="btn btn-primary">
-	  <a style="color:white" href="/main">Submit</a></button>
+	  {{!-- <button type="button" class="btn btn-primary"> --}}
+	  	{{!-- <a style="color:white" href="/main">Submit</a></button> --}}
+		<input type="submit" id="submitBtn" class="btn btn-default" value="Submit feedback"></input>
 	</form>
 
   <div class="bottomNav" style="height: 5rem;">
     <a href="/main"><i class="fas fa-lg fa-home"></i></a>
     <a href="/history"><i class="fas fa-lg fa-history"></i></a>
     <a href="/upload"><i class="fas fa-lg fa-plus-square"></i></a>
-    {{!-- <a href="/profile"><i class="fas fa-lg fa-th"></i></a> --}}
   </div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

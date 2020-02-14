@@ -43,7 +43,8 @@ if ('development' == app.get('env')) {
 
 app.get('/', login.view);
 app.get('/main', main.view);
-app.get('/givefeedback', givefeedback.view);
+app.get('/givefeedback/:itemNO', givefeedback.view);
+app.get('/givefeedback', givefeedback.addfeedback);
 app.get('/profile', profile.view);
 app.get('/history', history.view);
 app.get('/upload', upload.view);
