@@ -19,24 +19,17 @@
 		</a>
 	</nav>
 
-<div class="dropdown text-center">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Categories
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu dropdown-menu-center">
-    <li><a href="#">Photography</a></li>
-    <li><a href="#">Illustration</a></li>
-    <li><a href="#">Graphic Design</a></li>
-  </ul>
-</div>
+	<div class="dropdown text-center">
+	  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Categories
+	  <span class="caret"></span></button>
+	  <ul class="dropdown-menu dropdown-menu-center">
+	    <li><a href="#">Photography</a></li>
+	    <li><a href="#">Illustration</a></li>
+	    <li><a href="#">Graphic Design</a></li>
+	  </ul>
+	</div>
 
-
-	<div id="myCarousel" class="carousel slide"> 
-		<!-- <ol class="carousel-indicators">
-	    	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-	    	<li data-target="#myCarousel" data-slide-to="1"></li>
-	    	<li data-target="#myCarousel" data-slide-to="2"></li>
-	 	</ol> -->
-		
+	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">	
 		<div class="carousel-inner works">
 			{{#each posts}}
 				<div class="item" id={{no}}>
@@ -45,7 +38,6 @@
 				</div>
 			{{/each}}
 		</div>
-		
 	</div>
 
 	<div class="text-center">
@@ -55,8 +47,8 @@
 		<br>
 		<br>
 		<button type="button" class="btn btn-info" id="skip">
-			<a style="color:white" href="#myCarousel" data-slide="next">
-			Skip [3 Remaining]</a>
+			<a style="color:white" href="#myCarousel" href="#myCarousel" role="button" data-slide="next">
+			Skip</a>
 		</button>
 	</div>
 
