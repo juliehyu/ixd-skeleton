@@ -1,8 +1,14 @@
-var givefeedback = require('./givefeedback');
-var data_f = givefeedback.data_f;
+var data = require('../feedbackData.json');
 
 exports.view = function(req, res){
-    res.render('history');
-    console.log("hey");
-    console.log(data_f);
+
+    var givenData = data.feedback.filter(element => element.evaluatorID == "karen");
+    var receivedData = data.feedback.filter(element => element.userID == "karen");
+    console.log("given feedback");
+    var feedbackData = {
+        "given": givenData,
+        "received": receivedData
+    }
+    console.log(feedbackData);
+    res.render('history', feedbackData);
 };

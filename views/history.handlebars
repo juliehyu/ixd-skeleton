@@ -1,57 +1,63 @@
 <html>
 <head>
-	<link href="css/main.css" rel="stylesheet"></link>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 	<link href="css/history.css" rel="stylesheet"></link>
+	
 	<script src="https://kit.fontawesome.com/5475b02c18.js" crossorigin="anonymous"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Dconstruct</title>
 </head>
 <body>
-<div class="container">
-	<div class="topNav">
-		<div class="heading">
-			<a href="/"><h1>DCONSTRUCT</h1></a>
-		</div>
-		<div class="setting">
-			<i class="fas fa-cog"></i>
-		</div>
-	</div>
+<div>
+	<nav class="navbar fixed-top topNav navbar-light bg-light">
+		<a class="dconstruct"  href="#" >
+			<img src="source/D.png" id="s-logo" width="30" height="30"/>
+			<a href="#"><i class="profile fas fa-user fa-lg"></i></a>
+			<i class="profile2 fas fa-star fa-lg"> 3</i>
+		</a>
+	</nav>
 
     <h1 class="title">Feedback History</h1>
 
 	<div class=subBody>
 		<div class="feedbackType">
 			<h3 class="category">Received Feedback</h3>
-			<p> You do not have feedback yet. 
+			{{#each received}}
+				<div id={{no}}>
+					<img src={{image}}>
+					<p>{{questionResp}}</p>
+				</div>
+			{{/each}}
+			{{!-- <p> You do not have feedback yet. 
 				<br>Upload content to receive feedback.
 			</p>
-			<a href="/upload"><i class="far fa-plus-square"></i></a>
+			<a href="/upload"><i class="far fa-plus-square"></i></a> --}}
 		</div>
 
 		<div class="feedbackType">
 			<h3 class="category">Given Feedback</h3>
-			<p> You have not given feedback yet.
+			{{#each given}}
+				<div id={{no}}>
+					<img src={{image}}>
+					<p>{{questionResp}}</p>
+				</div>
+			{{/each}}
+			{{!-- <p> You have not given feedback yet.
 				<br>Give feedback to gain stars.
 			</p>
-			<a href="/givefeedback"><i class="fas fa-edit"></i></a>
+			<a href="/givefeedback"><i class="fas fa-edit"></i></a> --}}
 		</div>
 	</div>
 
 
-
-	<!-- <div>
-		<img class="works" src="source/default_img.jpg"></img>
-	</div> -->
-
-
-	<div class="footer">
-		
-	</div>
-	<div class="bottomNav">
-		<a href="/main"><i class="fas fa-home fa-lg"></i></a>
-		<a href="/history"><i class="fas fa-history fa-lg"></i></a>
-		<a href="/upload"><i class="far fa-plus-square fa-lg"></i></a>
-
+	<div class="bottomNav" style="height: 5rem;">
+		<a href="/main"><i class="fas fa-lg fa-home"></i></a>
+		<a href="/history"><i class="fas fa-lg fa-history"></i></a>
+		<a href="/upload"><i class="fas fa-lg fa-plus-square"></i></a>
 	</div>
 </div>
 </body>
