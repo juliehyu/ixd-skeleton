@@ -1,38 +1,76 @@
 <html>
 <head>
-	<link href="css/main.css" rel="stylesheet"></link>
 	<script src="https://kit.fontawesome.com/5475b02c18.js" crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/upload.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/main.js"></script>
 	<title>Dconstruct</title>
 </head>
 <body>
-<div class="container">
-	<div class="topNav">
-		<div class="heading">
-			<a href="/"><h1>DCONSTRUCT</h1></a>
-		</div>
-		<div class="setting">
-			<i class="fas fa-cog"></i>
-		</div>
-	</div>
+<div>
+	<nav class="navbar fixed-top topNav navbar-light bg-light">
+		<a class="dconstruct"  href="#" >
+			<img src="source/D.png" id="s-logo" width="30" height="30"/>
+			<a href="#"><i class="profile fas fa-user fa-lg"></i></a>
+			<i class="profile2 fas fa-star fa-lg"> 3</i>
+		</a>
+	</nav>
 
     <h1 class="title">Upload Content</h1>
 
 	<div>
 		<img class="works" src="source/default_img.jpg"></img>
 	</div>
-
-	<div class="footer">
-		
-	</div>
-	
-	<div class="bottomNav">
-		<a href="/main"><i class="fas fa-home fa-lg"></i></a>
-		<a href="/history"><i class="fas fa-history fa-lg"></i></a>
-		<a href="/upload"><i class="far fa-plus-square fa-lg"></i></a>
-
-	</div>
-	
+	<div class="text-center">
+	<label for="file-upload" class="text-center custom-file-upload">
+    <i class="fa fa-cloud-upload"></i> Custom Upload
+	</label>
+	<input id="file-upload" type="file"/>
 </div>
+
+	<script>
+	$(".custom-file-input").on("change", function() {
+	  var fileName = $(this).val().split("\\").pop();
+	  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+	});
+	</script>
+
+	<br>
+
+	<div class="dropdown text-center">
+	  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Categories
+	  <span class="caret"></span></button>
+	  <ul class="dropdown-menu">
+	    <li><a href="#">Photography</a></li>
+	    <li><a href="#">Illustration</a></li>
+	    <li><a href="#">Graphic Design</a></li>
+	  </ul>
+	</div>
+
+	<br>
+
+	<form target="_blank" id="addFriendForm" role="form" method="get" action="/givefeedback" onsubmit="window.location.href = '/main';">
+	  <div class="form-group text-center">
+	    <label for="textResponse1">Input your Question Here:</label>
+	    <input class="form-control" id="textResponse1" rows="2" name="answer1"></input>
+	    <br>
+	  <button type="button" class="btn btn-primary">
+	  	<a style="color:white" href="/main">Upload Post</a></button>
+	  </div>
+	</form>
+		
+  <div class="bottomNav" style="height: 5rem;">
+    <a href="/main"><i class="fas fa-lg fa-home"></i></a>
+    <a href="/history"><i class="fas fa-lg fa-history"></i></a>
+    <a href="/upload"><i class="fas fa-lg fa-plus-square"></i></a>
+  </div>
+
+</div>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
