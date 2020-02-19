@@ -3,6 +3,7 @@ var data_f = require('../feedbackData.json');
 
 var itemToShow;
 exports.view = function(req, res){
+    
     itemToShow = req.params.itemNO;
     console.log(itemToShow);
     console.log(data.posts[itemToShow]);
@@ -27,6 +28,4 @@ exports.addfeedback = function(req, res){
     console.log("-----------------------");
     console.log("AFTER");
     console.log(data_f.feedback);
-
-    // alert("You submitted a feedback!");
 }

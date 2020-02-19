@@ -22,61 +22,39 @@
 	</nav>
 </div>
 
-<!--     <h1 class="title">Upload Content</h1>
-
-
-		<img class="works" src="source/default_img.jpg"></img>
-	</div>
-	<div class="text-center">
-	<label for="file-upload" class="text-center custom-file-upload">
-    <i class="fa fa-cloud-upload"></i> Custom Upload
-	</label>
-	<input id="file-upload" type="file"/>
- -->
-
-
-	<!-- <script>
-	$(".custom-file-input").on("change", function() {
-	  var fileName = $(this).val().split("\\").pop();
-	  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-	});
-	</script>
-
-	<br> -->
-
-<!-- 	<div class="dropdown text-center">
-	  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Categories
-	  <span class="caret"></span></button>
-	  <ul class="dropdown-menu">
-	    <li><a href="#">Photography</a></li>
-	    <li><a href="#">Illustration</a></li>
-	    <li><a href="#">Graphic Design</a></li>
-	  </ul>
-	</div>
-
-	<br> -->
-
-	<form target="_blank" id="newPost" role="form" method="get" action="upload" onsubmit="window.location.href = '/main'">
+	<form id="newPost" role="form" method="get" action="/uploadPost">
 	<span class = "upload-wrapper">
-	    <input type= "file" class = "file-upload" accept = "image/*" id = "inpImg" onchange = "inputImg(this);">
+	    <input type= "file" class = "file-upload" accept = "image/*" id = "inpImg" onchange = "inputImg(this);" name="imageURL">
 	    <input type="button" id = "removeButton" onclick = "deleteImg(this);">
 	    <a onclick = "removeFile()" id = "dltButton"><i class="fas fa-times-circle rmv_initial" style="color: red"></i></a>
 	    <a onclick = "inputFile()" id = "imgButton"><img class = "imgPreview" id ="preview" src = "source/images/default.jpg" height="200" width="200"></a>
 	</span>
 	  <div class="form-group text-center">
 	    <label for="textResponse1">Input your Question Here:</label>
-	    <input class="form-control" id="textResponse1" rows="2" name="answer1"></input>
+	    <input class="form-control" id="textResponse1" rows="2" name="question"></input>
 	    <br>
-	  <button type="button" class="btn btn-primary">
-	  	<a style="color:white" href="/main">Upload Post</a></button>
+	  <button type="submit" class="btn btn-primary" >
+	  	<a style="color:white">Upload Post</a></button>
 	  </div>
 	</form>
 		
- <div class="bottomNav" style="height: 5rem;">
-    <a href="/main"><i class="fas fa-lg fa-home"></i></a>
-    <a href="/history"><i class="fas fa-lg fa-history"></i></a>
-    <a href="/upload"><i class="fas fa-lg fa-plus-square"></i></a>
-</div>
+
+	{{#each userPosts}}
+		<div id={{no}}>
+			<img class="upload-wrapper" src={{image}}>
+			<p>{{question}}</p>
+		</div>
+	{{/each}}
+
+	{{!-- keep all the data above the bottom nabvar --}}
+	<div class="bottomMargin">
+
+	</div>
+	<div class="bottomNav" style="height: 5rem;">
+		<a href="/main"><i class="fas fa-lg fa-home"></i></a>
+		<a href="/history"><i class="fas fa-lg fa-history"></i></a>
+		<a href="/upload"><i class="fas fa-lg fa-plus-square"></i></a>
+	</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>

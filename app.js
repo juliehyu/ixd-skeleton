@@ -48,7 +48,7 @@ app.get('/givefeedback', givefeedback.addfeedback);
 app.get('/profile', profile.view);
 app.get('/history', history.view);
 app.get('/upload', upload.view);
-
+app.get('/uploadPost', upload.uploadPost);
 // Example route
 // app.get('/users', user.list);
 

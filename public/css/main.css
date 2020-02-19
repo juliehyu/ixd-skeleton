@@ -30,7 +30,7 @@ body {
 .topNav{
     padding: 0.5rem;
     height: 3rem;
-    background-color: #C7C7BB;
+    background-color: #C7C7BB !important;
     display: flex;
     align-items: center;
     color: #7F867B;
@@ -192,6 +192,9 @@ body {
     color: black;
 }
 
+.bottomMargin {
+    height: 5rem;
+}
 
 .title{
     color: #7F867B;

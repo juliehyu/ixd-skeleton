@@ -1,0 +1,22 @@
+{
+	"userPosts": [
+		{
+			"no": "0",
+			"userID": "julieyuu",
+			"category": "photography",
+			"image": "source/images/julieyuu_2.jpg",
+			"question": "Does my photo have too much grain?",
+			"prompt": "How is the layout?",
+			"postID": 1
+		},
+		{
+			"no": "1",
+			"userID": "joeshky",
+			"category": "photography",
+			"image": "source/images/joeshky_1.jpg",
+			"question": "How is my cropping for this photo?",
+			"prompt": "",
+			"postID": 1
+		}
+	]
+}
