@@ -30,4 +30,3 @@ exports.addfeedback = function(req, res){
 
     // alert("You submitted a feedback!");
 }
-

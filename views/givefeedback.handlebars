@@ -24,11 +24,11 @@
 
 	<form target="_blank" id="addFriendForm" role="form" method="get" action="/givefeedback" onsubmit="window.location.href = '/main';">
 	  <div class="form-group">
-	    <label for="textResponse1">User Question</label>
+	    <label for="textResponse1">{{question}}</label>
 	    <input class="form-control" id="textResponse1" rows="2" name="answer1"></input>
 	  </div>
 	  <div class="form-group">
-	    <label for="textResponse2">Prompt Question #1</label>
+	    <label for="textResponse2">{{prompt}}</label>
 	    <input class="form-control" id="textResponse2" rows="2" name="answer2"></input>
 	  </div>
 	  {{!-- <button type="button" class="btn btn-primary"> --}}

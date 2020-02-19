@@ -1,7 +1,8 @@
 <html>
 <head>
 	<script src="https://kit.fontawesome.com/5475b02c18.js" crossorigin="anonymous"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
@@ -20,25 +21,25 @@
 	</nav>
 
 	<div class="dropdown text-center">
-	  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Categories
-	  <span class="caret"></span></button>
+	  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown">Photography</button>
 	  <ul class="dropdown-menu dropdown-menu-center">
-	    <li><a href="#">Photography</a></li>
-	    <li><a href="#">Illustration</a></li>
-	    <li><a href="#">Graphic Design</a></li>
+	    <li><a href="#" id="photography">Photography</a></li>
+	    <li><a href="#" id="illustration">Illustration</a></li>
+	    <li><a href="#" id="graphicdesign">Graphic Design</a></li>
 	  </ul>
 	</div>
 
-	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">	
-		<div class="carousel-inner works">
+	<div id="carouselExampleControls" class="carousel slide" data-ride="false">
+		<div class="carousel-inner">
 			{{#each posts}}
-				<div class="item" id={{no}}>
-					<img src={{image}}>
-					<p>{{question}}</p>
+				<div class="carousel-item" id={{no}}>
+					<img class="d-block w-100" src={{image}}>
 				</div>
 			{{/each}}
 		</div>
 	</div>
+
+
 
 	<div class="text-center">
 		<button type="button" class="btn btn-primary">
@@ -59,6 +60,9 @@
   </div>
 
 </div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>

@@ -1,16 +1,16 @@
 {
 	"posts": [
 		{
-			"no": "1",
+			"no": "0",
 			"userID": "julieyuu",
 			"category": "photography",
 			"image": "source/images/julieyuu_2.jpg",
 			"question": "Does my photo have too much grain?",
-			"prompt": "",
+			"prompt": "How is the layout?",
 			"postID": 1
 		},
 		{
-			"no": "2",
+			"no": "1",
 			"userID": "joeshky",
 			"category": "photography",
 			"image": "source/images/joeshky_1.jpg",
@@ -19,11 +19,20 @@
 			"postID": 1
 		},
 		{
-			"no": "3",
+			"no": "2",
 			"userID": "yujiheid",
 			"category": "photography",
 			"image": "source/images/yujiheid_1.jpg",
 			"question": "How are the colors in this? Too saturated? Too orange?",
+			"prompt": "",
+			"postID": 1
+		},
+		{
+			"no": "3",
+			"userID": "martitacrazy",
+			"category": "photography",
+			"image": "source/images/martitacrazy_1.jpg",
+			"question": "Opinions on how this photo makes you feel please.",
 			"prompt": "",
 			"postID": 1
 		},
@@ -47,15 +56,6 @@
 		},
 		{
 			"no": "6",
-			"userID": "martitacrazy",
-			"category": "photography",
-			"image": "source/images/martitacrazy_1.jpg",
-			"question": "Opinions on how this photo makes you feel please.",
-			"prompt": "",
-			"postID": 1
-		},
-		{
-			"no": "7",
 			"userID": "martitacrazy",
 			"category": "photography",
 			"image": "source/images/martitacrazy_1.jpg",
