@@ -13,15 +13,8 @@
 </head>
 <body>
 <div>
-	<nav style="margin-bottom: 0px;" class="navbar fixed-top topNav navbar-light bg-light">
-		<a class="dconstruct"  href="#" >
-			<img src="source/D.png" id="s-logo" width="30" height="30"/>
-			<a href="/profile"><i class="profile fas fa-user fa-lg"></i></a>
-			<i class="profile2 fas fa-star fa-lg"> 3</i>
-		</a>
-	</nav>
-
-
+	{{> topnav}}
+	
 	<ul class=" nav nav-pills mb-3 justify-content-center nav-fill" id="pills-tab" role="tablist">
 	  <li class="nav-item">
 	    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Sent</a>
@@ -118,11 +111,7 @@
 -->
 
 
-	<div class="bottomNav" style="height: 5rem;">
-		<a href="/main"><i class="fas fa-lg fa-home"></i></a>
-		<a href="/history"><i class="fas fa-lg fa-history"></i></a>
-		<a href="/upload"><i class="fas fa-lg fa-plus-square"></i></a>
-	</div>
+{{> navbar}}
 </div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
