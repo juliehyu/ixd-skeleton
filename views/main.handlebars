@@ -17,14 +17,14 @@
 	<nav class="navbar fixed-top topNav navbar-light bg-light">
 		<a class="dconstruct"  href="#" >
 			<img src="source/D.png" id="s-logo" width="30" height="30"/>
-			<a href="#"><i class="profile fas fa-user fa-lg"></i></a>
+			<a href="/profile"><i class="profile fas fa-user fa-lg"></i></a>
 			<i class="profile2 fas fa-star fa-lg"> 3</i>
 		</a>
 	</nav>
 
 	<div class="dropdown text-center">
 	  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown">Photography</button>
-	  <ul class="dropdown-menu dropdown-menu-center">
+	  <ul class="dropdown-menu dropdown-menu-center" >
 	    <li><a href="#" id="photography">Photography</a></li>
 	    <li><a href="#" id="illustration">Illustration</a></li>
 	    <li><a href="#" id="graphicdesign">Graphic Design</a></li>
@@ -32,7 +32,7 @@
 	</div>
 
 	<div id="carouselExampleControls" class="carousel slide" data-ride="false">
-		<div class="carousel-inner">
+		<div class="works carousel-inner">
 			{{#each posts}}
 				<div class="carousel-item" id={{no}}>
 					<img class="d-block w-100" src={{image}}>

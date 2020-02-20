@@ -27,7 +27,13 @@ function changeActive(e) {
     var currentPost= $("#"+count);
     currentPost.attr('class', 'carousel-item');
 
+
     count += 1;
+
+    if (count == 3) {
+        count = 0;
+    }
+
 
     console.log("after: ", count);
     var newPost = $("#"+count);
@@ -47,8 +53,8 @@ function changeToPhotography(e) {
 
 function changeToIllustration(e) {
     e.preventDefault();
-    $("#dropdown").text("Illastration");
-    console.log("illustration");
+    $("#dropdown").text("Illustration");
+    console.log("Illustration");
 }
 
 function changeToGraphicdesign(e) {
