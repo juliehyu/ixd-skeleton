@@ -4,8 +4,13 @@ $(document).ready(function() {
 })
 
 function initializePage() {
-	console.log("check");
-    
+	$("#photography").click(changeToPhotography);
+    $("#illustration").click(changeToIllustration);
+	$("#graphicdesign").click(changeToGraphicdesign);
+	
+	$("#prompt1").click(changeToPrompt1);
+    $("#prompt2").click(changeToPrompt2);
+    $("#prompt3").click(changeToPrompt3);
 }
 
 function inputFile(){
@@ -31,3 +36,35 @@ function deleteImg(){
 }
 
 
+function changeToPhotography(e) {
+    e.preventDefault();
+    $("#dropdown1").text("Photography");
+    console.log("photography");
+}
+
+function changeToIllustration(e) {
+    e.preventDefault();
+    $("#dropdown1").text("Illustration");
+    console.log("Illustration");
+}
+
+function changeToGraphicdesign(e) {
+    e.preventDefault();
+    $("#dropdown1").text("Graphic Design");
+    console.log("graphic design");
+}
+
+function changeToPrompt1(e) {
+	e.preventDefault();
+    $("#dropdown2").text("About the color");
+}
+
+function changeToPrompt2(e) {
+	e.preventDefault();
+    $("#dropdown2").text("About the layout");
+}
+
+function changeToPrompt3(e) {
+	e.preventDefault();
+    $("#dropdown2").text("About the lighting");
+}

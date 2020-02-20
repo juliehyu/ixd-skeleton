@@ -41,7 +41,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', main.view);
+app.get('/', login.view);
 app.get('/main', main.view);
 app.get('/givefeedback/:itemNO', givefeedback.view);
 app.get('/givefeedback', givefeedback.addfeedback);

@@ -3,6 +3,7 @@
 		{
 			"userID": "karen",
 			"postID": "1",
+			"category": "photography",
 			"image": "source/images/julieyuu_2.jpg",
 			"evaluatorID": "julie",
 			"questionResp": "The grain isn't too distracting. I like how it gives it a film photography look.",
@@ -12,6 +13,7 @@
 		{
 			"userID": "karen",
 			"postID": "2",
+			"category": "photography",
 			"image": "source/images/joeshky_1.jpg",
 			"evaluatorID": "julie",
 			"questionResp": "There's nothing wrong with the subject frame. There's no weird cropping where the subject is cut off. Maybe try to capture the subject through a different angle in the future for a more interesting look.",
@@ -21,6 +23,7 @@
 		{
 			"userID": "julie",
 			"postID": "1",
+			"category": "photography",
 			"image": "source/images/yujiheid_1.jpg",
 			"evaluatorID": "karen",
 			"questionResp": "The grain isn't too distracting. I like how it gives it a film photography look.",
@@ -30,6 +33,7 @@
 		{
 			"userID": "rotimi",
 			"postID": "2",
+			"category": "photography",
 			"image": "source/images/martitacrazy_1.jpg",
 			"evaluatorID": "karen",
 			"questionResp": "There's nothing wrong with the subject frame. There's no weird cropping where the subject is cut off. Maybe try to capture the subject through a different angle in the future for a more interesting look.",
