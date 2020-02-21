@@ -7,6 +7,7 @@ exports.view = function(req, res){
   
 
 exports.uploadPost = function(req, res){
+  console.log(req.query);
     var newPost = {
       "no": "0",
 			"userID": "julieyuu",
@@ -16,6 +17,7 @@ exports.uploadPost = function(req, res){
 			"prompt": "How is the layout?",
 			"postID": 1
     }
+    console.log(req.query.imageURL);
     data.userPosts.push(newPost);
     res.render('upload', data);
 }

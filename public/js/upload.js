@@ -23,10 +23,22 @@ function removeFile(){
 }
 
 function inputImg(input){
-	var newImg = "source/images/" + document.getElementById("inpImg").files[0].name;
-	console.log(newImg);
-	$("#preview").attr("src", newImg);
+	 if (input.files && input.files[0]) {
+    	var reader = new FileReader();
+    
+    	reader.onload = function(e) {
+      		$('#preview').attr('src', e.target.result);
+      		//$('#inpImg').attr('name', e.target.result);
+    	}
+    
+    	reader.readAsDataURL(input.files[0]);
+  	}
+	//var newImg = "source/images/" + document.getElementById("inpImg").files[0].name;
+	//console.log(newImg);
+	//$("#preview").attr("src", newImg);
 	$("i.rmv_initial").addClass("rmv_final");
+	$('#inpImg').attr('name', e.target.result);
+
 }
 
 function deleteImg(){
@@ -38,19 +50,19 @@ function deleteImg(){
 
 function changeToPhotography(e) {
     e.preventDefault();
-    $("#dropdown1").text("Photography");
+    $("#dropdown1").html("Photography");
     console.log("photography");
 }
 
 function changeToIllustration(e) {
     e.preventDefault();
-    $("#dropdown1").text("Illustration");
+    $("#dropdown1").html("Illustration");
     console.log("Illustration");
 }
 
 function changeToGraphicdesign(e) {
     e.preventDefault();
-    $("#dropdown1").text("Graphic Design");
+    $("#dropdown1").html("Graphic Design");
     console.log("graphic design");
 }
 

@@ -47,18 +47,18 @@ function changeActive(e) {
 
 function changeToPhotography(e) {
     e.preventDefault();
-    $("#dropdown").text("Photography");
+    $("#dropdown").html("Photography");
     console.log("photography");
 }
 
 function changeToIllustration(e) {
     e.preventDefault();
-    $("#dropdown").text("Illustration");
+    $("#dropdown").html("Illustration");
     console.log("Illustration");
 }
 
 function changeToGraphicdesign(e) {
     e.preventDefault();
-    $("#dropdown").text("Graphic Design");
+    $("#dropdown").html("Graphic Design");
     console.log("graphic design");
 }
