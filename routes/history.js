@@ -1,14 +1,24 @@
-var data = require('../feedbackData.json');
+function requireUncached(module){
+    delete require.cache[require.resolve(module)];
+    return require(module);
+}
 
 exports.view = function(req, res){
+    var data = requireUncached('../feedbackData.json');
 
-    var givenData = data.feedback.filter(element => element.evaluatorID == "karen");
-    var receivedData = data.feedback.filter(element => element.userID == "karen");
-    console.log("given feedback");
+    var givenDataP = data.feedback.filter(element => element.evaluatorID == "karen" && element.category == "photography");
+    var givenDataI = data.feedback.filter(element => element.evaluatorID == "karen" && element.category == "illustration");
+    var givenDataG = data.feedback.filter(element => element.evaluatorID == "karen" && element.category == "graphicdesign");
+    var receivedDataP = data.feedback.filter(element => element.userID == "karen" && element.category == "photography");
+    var receivedDataI = data.feedback.filter(element => element.userID == "karen" && element.category == "illustration")
+    var receivedDataG = data.feedback.filter(element => element.userID == "karen" && element.category == "graphicdesign");
     var feedbackData = {
-        "given": givenData,
-        "received": receivedData
+        "givenP": givenDataP,
+        "givenI": givenDataI,
+        "givenG": givenDataG,
+        "receivedP": receivedDataP,
+        "receivedI": receivedDataI,
+        "receivedG": receivedDataG
     }
-    console.log(feedbackData);
     res.render('history', feedbackData);
 };

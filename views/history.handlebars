@@ -26,7 +26,8 @@
 	<div class="tab-content" id="pills-tabContent">
 	  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 	  	<h1 class="title">Sent History</h1>
-			{{#each received}}
+		  <h2>Phtography</h2>
+			{{#each receivedP}}
 			<div class="container-fluid">
 			    <div class="row">
 			        <div class="col-12 mt-3">
@@ -40,8 +41,45 @@
 			                        <p class="card-text">{{questionResp}}</p>
 			                    </div>
 			                </div>
-			                <div class="card-footer">
-			                    <small class="text-muted">{{category}}</small>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			{{/each}}
+			<h2>Illustration</h2>
+			{{#each receivedI}}
+			<div class="container-fluid">
+			    <div class="row">
+			        <div class="col-12 mt-3">
+			            <div class="card bg-light">
+			                <div class="card-horizontal">
+			                    <div class="img-square-wrapper">
+			      					<img src={{image}} class="works2" alt="...">
+			                    </div>
+			                    <div class="card-body">
+			                        <h4 class="card-title">RATING GOES HERE</h4>
+			                        <p class="card-text">{{questionResp}}</p>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			{{/each}}
+			<h2>Graphic Design</h2>
+			{{#each receivedG}}
+			<div class="container-fluid">
+			    <div class="row">
+			        <div class="col-12 mt-3">
+			            <div class="card bg-light">
+			                <div class="card-horizontal">
+			                    <div class="img-square-wrapper">
+			      					<img src={{image}} class="works2" alt="...">
+			                    </div>
+			                    <div class="card-body">
+			                        <h4 class="card-title">RATING GOES HERE</h4>
+			                        <p class="card-text">{{questionResp}}</p>
+			                    </div>
 			                </div>
 			            </div>
 			        </div>
@@ -52,7 +90,8 @@
 
 	  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 	  	<h1 class="title">Recieved History</h1>
-		{{#each given}}
+		<h2>Photography</h2>
+		{{#each givenP}}
 		<div class="container-fluid">
 		    <div class="row">
 		        <div class="col-12 mt-3">
@@ -66,8 +105,45 @@
 		                        <p class="card-text">{{questionResp}}</p>
 		                    </div>
 		                </div>
-		                <div class="card-footer">
-		                    <small class="text-muted">{{category}}</small>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		{{/each}}
+		<h2>Illustration</h2>
+		{{#each givenI}}
+		<div class="container-fluid">
+		    <div class="row">
+		        <div class="col-12 mt-3">
+		            <div class="card">
+		                <div class="card-horizontal">
+		                    <div class="img-square-wrapper">
+		      					<img src={{image}} class="works2" alt="...">
+		                    </div>
+		                    <div class="card-body">
+		                        <h4 class="card-title">RATING GOES HERE</h4>
+		                        <p class="card-text">{{questionResp}}</p>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		{{/each}}
+		<h2>Graphic Desgign</h2>
+		{{#each givenG}}
+		<div class="container-fluid">
+		    <div class="row">
+		        <div class="col-12 mt-3">
+		            <div class="card">
+		                <div class="card-horizontal">
+		                    <div class="img-square-wrapper">
+		      					<img src={{image}} class="works2" alt="...">
+		                    </div>
+		                    <div class="card-body">
+		                        <h4 class="card-title">RATING GOES HERE</h4>
+		                        <p class="card-text">{{questionResp}}</p>
+		                    </div>
 		                </div>
 		            </div>
 		        </div>
@@ -76,40 +152,6 @@
 		{{/each}}
 	  </div>
 	</div>
-
-<!--
-    <h1 class="title">Feedback History</h1>
-
-	<div class=subBody>
-		<div class="feedbackType">
-			<h3 class="category">Received Feedback</h3>
-			{{#each received}}
-					<img class="works" src={{image}}>
-					<p>{{questionResp}}</p>
-				</div>
-			{{/each}}
-			{{!-- <p> You do not have feedback yet. 
-				<br>Upload content to receive feedback.
-			</p>
-			<a href="/upload"><i class="far fa-plus-square"></i></a> --}}
-		</div>
-
-		<div class="feedbackType">
-			<h3 class="category">Given Feedback</h3>
-			{{#each given}}
-				<div id={{no}}>
-					<img class="works" src={{image}}>
-					<p>{{questionResp}}</p>
-				</div>
-			{{/each}}
-			{{!-- <p> You have not given feedback yet.
-				<br>Give feedback to gain stars.
-			</p>
-			<a href="/givefeedback"><i class="fas fa-edit"></i></a> --}}
-		</div>
-	</div>
--->
-
 
 {{> navbar}}
 </div>

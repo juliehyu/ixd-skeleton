@@ -15,9 +15,9 @@
 <body>
 <div>
 	{{> topnav}}
-
-	<div class="dropdown text-center">
-	  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown">Photography</button>
+	<h1 class="title">Give Feedback</h1>
+	<div class="dropdown text-center" id="categoryDropdown">
+	  <button class="btn myBtn dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown">Photography</button>
 	  <ul class="dropdown-menu dropdown-menu-center" >
 	    <li><a href="#" id="photography">Photography</a></li>
 	    <li><a href="#" id="illustration">Illustration</a></li>
@@ -36,17 +36,16 @@
 	</div>
 
 
-
 	<div class="text-center">
-		<button type="button" class="btn btn-primary">
+		<button type="button" class="btn myBtn">
 		  	<a style="color:white" id="linkToGiveFeedback">Give Feedback</a>
 		</button>
 		<br>
 		<br>
-		<button type="button" class="btn btn-info" id="skip">
-			<a style="color:white" href="#myCarousel" href="#myCarousel" role="button" data-slide="next">
-			Skip</a>
+		<button type="button" class="btn myBtn" id="skip">
+			<a style="color:white" href="#myCarousel" href="#myCarousel" role="button" data-slide="next">Skip</a>
 		</button>
+		<p>You have 3 skips left</p>
 	</div>
 
 	{{> navbar}}

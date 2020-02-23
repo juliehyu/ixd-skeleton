@@ -7,6 +7,8 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
+//  for JSON
+var fs = require('fs');
 
 var login = require('./routes/login');
 var main = require('./routes/main');
@@ -35,6 +37,8 @@ app.use(express.cookieParser('IxD secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+// for JSON
+app.use(express.static('public'));
 
 // development only
 if ('development' == app.get('env')) {
@@ -44,14 +48,52 @@ if ('development' == app.get('env')) {
 app.get('/', login.view);
 app.get('/main', main.view);
 app.get('/givefeedback/:itemNO', givefeedback.view);
-app.get('/givefeedback', givefeedback.addfeedback);
+// app.get('/givefeedback', givefeedback.addfeedback);
 app.get('/profile', profile.view);
 app.get('/history', history.view);
 app.get('/upload', upload.view);
 app.get('/uploadPost', upload.uploadPost);
+app.get('/updateCategory', upload.updateCategory);
 // Example route
 // app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+
+
+app.get('/givefeedback', function(req, res) {
+  var newFeedback = {
+    userID: "rotimi",
+    postID: "4",
+    category: "photography",
+    image: "source/images/martitacrazy_1.jpg",
+    evaluatorID: "karen",
+    questionResp: req.query.answer1,
+    promptResp: req.query.answer2,
+    stars: null
+  }
+
+  savePersonToPublicFolder(newFeedback, function(err) {
+    if (err) {
+      res.status(404).send('User not saved');
+      return;
+    }
+
+    res.send('User saved');
+  });
+});
+
+
+function savePersonToPublicFolder(newFeedback, callback) {
+  fs.readFile('./feedbackData.json', 'utf8', function readFileCallback(err, data){
+    if (err){
+      console.log(err);
+    } else {
+      var parsedData = JSON.parse(data);
+      parsedData.feedback.push(newFeedback);
+      fs.writeFile('./feedbackData.json', JSON.stringify(parsedData), 'utf8', callback);
+    }
+  });
+}

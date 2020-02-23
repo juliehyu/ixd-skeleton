@@ -51,19 +51,16 @@ function deleteImg(){
 function changeToPhotography(e) {
     e.preventDefault();
     $("#dropdown1").html("Photography");
-    console.log("photography");
 }
 
 function changeToIllustration(e) {
     e.preventDefault();
     $("#dropdown1").html("Illustration");
-    console.log("Illustration");
 }
 
 function changeToGraphicdesign(e) {
     e.preventDefault();
     $("#dropdown1").html("Graphic Design");
-    console.log("graphic design");
 }
 
 function changeToPrompt1(e) {

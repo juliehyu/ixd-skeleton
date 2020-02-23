@@ -11,6 +11,13 @@ body {
     margin: 0;
 }
 
+hr {
+    border-top: solid 2px;
+}
+
+br {
+    line-height: 1rem;
+}
 .container{
     background-color: #E3E4E0;
 }
@@ -33,13 +40,13 @@ body {
 }
 
 .topNav{
-    padding: 0.5rem;
     height: 3rem;
     background-color: #C7C7BB !important;
     display: flex;
     align-items: center;
     color: #7F867B;
     vertical-align: middle;
+    position: fixed; 
 }
 
 
@@ -114,6 +121,39 @@ body {
     vertical-align: middle;
 }
 
+#categoryDropdown {
+    margin-top: 2rem;
+}
+.myBtn {
+    width: 12rem;
+    background-color: #7F867B;
+    color: white;
+}
+
+.myBtn-hollow {
+    width: 12rem;
+    background-color: transparent;
+    color: #7F867B;
+    border: solid 1px #7F867B;
+}
+
+.myBtn-hollow-long {
+    width: 12rem;
+    background-color: transparent;
+    color: #7F867B;
+    border: solid 1px #7F867B;
+    width: 100%;
+}
+.myForm {
+    color: #7F867B;
+}
+.myInput {
+    border-color: #7F867B;
+}
+
+.marginTop {
+    margin-top: 3rem;
+}
 
 .buttonContainer a{
     margin: 10px auto;
@@ -212,6 +252,10 @@ body {
 
 .bottomMargin {
     height: 5rem;
+}
+
+.topMargin {
+    height: 4rem;
 }
 
 .title{
