@@ -288,7 +288,7 @@ a {
 }
 
 #subwelcome{
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 #logo{
@@ -298,6 +298,9 @@ a {
     margin-bottom: 2rem;
 }
 
+#loginBtn{
+    margin-bottom: 1rem;
+}
 .dropdown-menu-center {
   float: none;
   position: absolute;

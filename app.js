@@ -64,11 +64,13 @@ http.createServer(app).listen(app.get('port'), function(){
 
 
 app.get('/givefeedback', function(req, res) {
+  //TODO: now using static data
   var newFeedback = {
     userID: "rotimi",
     postID: "4",
     category: "photography",
     image: "source/images/martitacrazy_1.jpg",
+    feedbackID: 10,   
     evaluatorID: "karen",
     questionResp: req.query.answer1,
     promptResp: req.query.answer2,
@@ -81,7 +83,8 @@ app.get('/givefeedback', function(req, res) {
       return;
     }
 
-    res.send('User saved');
+    // res.send('/main', main.view);
+    res.redirect('/main')
   });
 });
 

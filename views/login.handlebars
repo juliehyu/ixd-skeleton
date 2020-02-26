@@ -20,8 +20,23 @@
     <h2 class="title" id="welcome">Welcome to Dconstruct!</h2>
     <p id="subwelcome">Share your work and get great feedback here.</p>
     
+
+    <form class="myForm text-center" id="loginForm" role="form" method="get" action="/main" >
+	  <div class="form-group">
+	    <label for="textResponse1">Account</label>
+	    <input class="form-control myInput" id="account" rows="2" name="account"></input>
+	  </div>
+	  <div class="form-group">
+	    <label for="textResponse2">Password</label>
+	    <input class="form-control myInput" id="password" rows="2" name="password"></input>
+	  </div>
+		<input type="submit" id="submitBtn" class="btn myBtn" value="Login"></input>
+	</form>
+    
     <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="false" scope="public_profile,email" onlogin="checkLoginState();"></div>
     <p class="facebookLogin">Please login through Facebook</p>
+
+
 </div>
 </body>
 </html>
