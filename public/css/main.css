@@ -236,12 +236,11 @@ br {
 
 
 .bottomNav a{
-
     float: center;
     display: block;
     color: #7F867B;
     text-align: center;
-    padding: 14px 50px;
+    padding: 16px 15px;
     text-decoration: none;
 }
 
