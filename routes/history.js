@@ -22,6 +22,7 @@ exports.view = function(req, res){
     }
     feedbackData["pageA"]=false;
     res.render('history', feedbackData);
+    console.log(feedbackData["pageA"]);
     
 };
 exports.pageA = function(req, res){
@@ -42,7 +43,7 @@ exports.pageA = function(req, res){
         "receivedG": receivedDataG
     }
     feedbackData["pageA"]=true;
-
     res.render('history', feedbackData);
+    console.log(feedbackData["pageA"]);
     
 }
