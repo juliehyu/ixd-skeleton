@@ -18,11 +18,12 @@ exports.view = function(req, res){
         "givenG": givenDataG,
         "receivedP": receivedDataP,
         "receivedI": receivedDataI,
-        "receivedG": receivedDataG
+        "receivedG": receivedDataG,
+        "showPageA": 0
     }
     res.render('history', feedbackData);
-    feedbackData["pageA"]=false;
 };
+
 exports.pageA = function(req, res){
     var data = requireUncached('../feedbackData.json');
 
@@ -38,9 +39,8 @@ exports.pageA = function(req, res){
         "givenG": givenDataG,
         "receivedP": receivedDataP,
         "receivedI": receivedDataI,
-        "receivedG": receivedDataG
+        "receivedG": receivedDataG,
+        "showPageA": 1
     }
     res.render('history', feedbackData);
-    feedbackData["pageA"]=true;
-
 }

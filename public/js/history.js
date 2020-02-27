@@ -28,9 +28,10 @@ function minus(){
 	if (count != minCount){
 		count -= 1;
 		$('#numStars').html(count);
-	}
-
+    }
+    
 }
+
 function changeTo1Star(e) {
     e.preventDefault();
     $("#dropdown").text("1");

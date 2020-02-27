@@ -118,6 +118,8 @@
 	  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 	  	<h1 class="title">Recieved History</h1>
 		<h2>Photography</h2>
+		<p>hello {{showPageA}}</p>
+		{{#if showPageA}} 
 		{{#each receivedP}}
 		<div class="container-fluid">
 		    <div class="row">
@@ -128,19 +130,35 @@
 		      					<img src={{image}} class="works2" alt="...">
 		                    </div>
 		                    <div class="card-body">
-		                    	
-		                        {{#if pageA}} 
+
 		                    	<form id="rateFB" role="form" method="get" action="/addStars">
 			                    		<div class = "rating">
 			                        		<a onclick = "add()" id = "adding"><i class="fas fa-plus-circle" style="color: red"></i></a>
 			                        		<i class="fas fa-star" ></i> 
-			                        		<h5 id="numStars" name = "totalStars"> 0 </h5>
+			                        		<h5 id={{feedbackID}} name = "totalStars"> 0 </h5>
 			                        		<a onclick = "minus()" id = "subtracting"><i class="fas fa-minus-circle" style="color: red"></i></a>
 			                        	</div>
 			                    </form>
-			      
-			                    {{else}}
-			                    <form id="rateFB" role="form" method="get" action="/addStars">
+		                        <p class="card-text">{{questionResp}}</p>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		{{/each}}
+		{{else}}
+		{{#each receivedP}}
+		<div class="container-fluid">
+		    <div class="row">
+		        <div class="col-12 mt-3">
+		            <div class="card">
+		                <div class="card-horizontal">
+		                    <div class="img-square-wrapper">
+		      					<img src={{image}} class="works2" alt="...">
+		                    </div>
+		                    <div class="card-body">
+								<form id="rateFB" role="form" method="get" action="/addStars">
 			                    		<div class = "ratingA">
 			                        		<button class="btn myBtn dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown"><i class="fas fa-star" style="color: white"></i> -- </button>
 											  <ul class="dropdown-menu dropdown-menu-center">
@@ -152,7 +170,6 @@
 											  </ul>
 			                        	</div>
 			                    </form>
-			                    {{/if}}
 		                        <p class="card-text">{{questionResp}}</p>
 		                    </div>
 		                </div>
@@ -161,6 +178,8 @@
 		    </div>
 		</div>
 		{{/each}}
+			                    
+		{{/if}}
 		<h2>Illustration</h2>
 		{{#each receivedI}}
 

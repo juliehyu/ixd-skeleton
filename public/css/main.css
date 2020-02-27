@@ -304,5 +304,19 @@ a {
   float: none;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 0%);}
+  transform: translate(-50%, 0%);
+}
+
+.nav-item {
+    background-color: white !important; 
+    color: #7F867B !important;
+    border: solid 0px !important;
+    font-size: 2rem;
+}
+
+.nav-item .active{
+    background-color: white !important; 
+    color: #7F867B !important;
+    border: solid 3px #7F867B!important;
+}
 
