@@ -51,7 +51,9 @@ app.get('/givefeedback/:itemNO', givefeedback.view);
 // app.get('/givefeedback', givefeedback.addfeedback);
 app.get('/profile', profile.view);
 app.get('/history', history.view);
+app.get('/pageA', history.pageA);
 app.get('/upload', upload.view);
+
 // app.get('/uploadPost', upload.uploadPost);
 // app.get('/updateCategory', upload.updateCategory);
 

@@ -37,3 +37,33 @@
 .category {
 	text-align: center;
 }
+
+.rating {
+	display: flex;
+	justify-content: space-between;
+	width: 100px;
+}
+
+.rating i{
+	position: relative;
+	top: 10px;
+	width: 10px;
+	height: 10px;
+}
+
+.card-text{
+	width: 160px;
+}
+
+.ratingA {
+	display: flex;
+	justify-content: left;
+	width: 100px;
+}
+}
+.ratingA i{
+	position: relative;
+	top: 4px;
+	width: 10px;
+	height: 10px;
+}
