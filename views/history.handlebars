@@ -129,19 +129,10 @@
 		                    </div>
 		                    <div class="card-body">
 		                    	
-		                        {{#if pageA}} 
-		                    	<form id="rateFB" role="form" method="get" action="/addStars">
-			                    		<div class = "rating">
-			                        		<a onclick = "add()" id = "adding"><i class="fas fa-plus-circle" style="color: red"></i></a>
-			                        		<i class="fas fa-star" ></i> 
-			                        		<h5 id="numStars" name = "totalStars"> 0 </h5>
-			                        		<a onclick = "minus()" id = "subtracting"><i class="fas fa-minus-circle" style="color: red"></i></a>
-			                        	</div>
-			                    </form>
-			      
-			                    {{else}}
-			                    <form id="rateFB" role="form" method="get" action="/addStars">
-			                    		<div class = "ratingA">
+		                       
+		                    	<!-- <form id="rateFB" role="form" method="get" action="/addStars"> -->
+		                    		{{#if pageA}}
+		                    			<div class = "ratingA">
 			                        		<button class="btn myBtn dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown"><i class="fas fa-star" style="color: white"></i> -- </button>
 											  <ul class="dropdown-menu dropdown-menu-center">
 											    <li><a href="#" id="1star">1</a></li>
@@ -151,8 +142,33 @@
 											    <li><a href="#" id="5star">5</a></li>
 											  </ul>
 			                        	</div>
-			                    </form>
-			                    {{/if}}
+			                    		
+			                        {{else}}
+			                        	
+			                        	<div class = "rating">
+
+			                        		<a onclick = "add()" id = "adding"><i class="fas fa-plus-circle" style="color: red"></i></a>
+			                        		<i class="fas fa-star" ></i> 
+			                        		<h5 id="numStars" name = "totalStars"> 0 </h5>
+			                        		<a onclick = "minus()" id = "subtracting"><i class="fas fa-minus-circle" style="color: red"></i></a>
+			                        	</div>
+			                        {{/if}}
+			                    <!-- </form> -->
+			      
+			                   
+			                    <!-- <form id="rateFB" role="form" method="get" action="/addStars">
+			                    		<div class = "ratingA">
+			                        		<button class="btn myBtn dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown"><i class="fas fa-star" style="color: white"></i> --node </button>
+											  <ul class="dropdown-menu dropdown-menu-center">
+											    <li><a href="#" id="1star">1</a></li>
+											    <li><a href="#" id="2star">2</a></li>
+											    <li><a href="#" id="3star">3</a></li>
+											    <li><a href="#" id="4star">4</a></li>
+											    <li><a href="#" id="5star">5</a></li>
+											  </ul>
+			                        	</div>
+			                    </form> -->
+			                    
 		                        <p class="card-text">{{questionResp}}</p>
 		                    </div>
 		                </div>
