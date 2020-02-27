@@ -52,10 +52,8 @@ app.get('/givefeedback/:itemNO', givefeedback.view);
 app.get('/profile', profile.view);
 app.get('/history', history.view);
 app.get('/upload', upload.view);
-app.get('/uploadPost', upload.uploadPost);
-app.get('/updateCategory', upload.updateCategory);
-// Example route
-// app.get('/users', user.list);
+// app.get('/uploadPost', upload.uploadPost);
+// app.get('/updateCategory', upload.updateCategory);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
@@ -64,22 +62,45 @@ http.createServer(app).listen(app.get('port'), function(){
 
 
 app.get('/givefeedback', function(req, res) {
-  //TODO: now using static data
+  //TODO: the user is always karen in this case
+
   var newFeedback = {
-    userID: "rotimi",
-    postID: "4",
-    category: "photography",
-    image: "source/images/martitacrazy_1.jpg",
-    feedbackID: 10,   
+    no: req.query.no,           
+    feedbackID: 0,   
+    userID: req.query.userID,
     evaluatorID: "karen",
+    category: req.query.category,
+    image: req.query.image,
     questionResp: req.query.answer1,
     promptResp: req.query.answer2,
     stars: null
   }
 
-  savePersonToPublicFolder(newFeedback, function(err) {
+  fs.readFile('./nextFeedbackID.json', 'utf8', function readFile(err, data){
+    var parsedData = JSON.parse(data);
+    
+    console.log("Read out " + parsedData.nextFeedbackID);
+    newFeedback.feedbackID = parsedData.nextFeedbackID;
+    console.log("Psuh in " + newFeedback.feedbackID);
+
+
+    var newObj = {
+      nextFeedbackID: newFeedback.feedbackID + 1
+    }
+    console.log("New next " + newObj.nextFeedbackID);
+
+
+    fs.writeFile('./nextFeedbackID.json', JSON.stringify(newObj), (err) => {
+        if (err) throw err;
+        console.log('Data written to file');
+    });
+  });
+
+  
+  
+  saveFeedbackToFile(newFeedback, function(err) {
     if (err) {
-      res.status(404).send('User not saved');
+      res.status(404).send('Feedback not saved');
       return;
     }
 
@@ -89,7 +110,8 @@ app.get('/givefeedback', function(req, res) {
 });
 
 
-function savePersonToPublicFolder(newFeedback, callback) {
+
+function saveFeedbackToFile(newFeedback, callback) {
   fs.readFile('./feedbackData.json', 'utf8', function readFileCallback(err, data){
     if (err){
       console.log(err);
@@ -97,6 +119,65 @@ function savePersonToPublicFolder(newFeedback, callback) {
       var parsedData = JSON.parse(data);
       parsedData.feedback.push(newFeedback);
       fs.writeFile('./feedbackData.json', JSON.stringify(parsedData), 'utf8', callback);
+    }
+  });
+}
+
+
+
+
+app.get('/uploadPost', function(req, res) {
+  var newPost = {
+    no: 0,
+    userID: "karen",
+    category: req.query.hiddenCategory,
+    image: "source/images/" + req.query.imageURL,
+    question: req.query.question,
+    prompt: req.query.hiddenPrompt
+  }
+
+  fs.readFile('./nextPostID.json', 'utf8', function readFile(err, data){
+    var parsedData = JSON.parse(data);
+    
+    console.log("Read out " + parsedData.nextPostID);
+    newPost.no = parsedData.nextPostID;
+    console.log("Psuh in " + newPost.no);
+
+
+    var newObj = {
+      nextPostID: newPost.no + 1
+    }
+    console.log("New next " + newObj.nextPostID);
+
+
+    fs.writeFile('./nextPostID.json', JSON.stringify(newObj), (err) => {
+        if (err) throw err;
+        console.log('Data written to file');
+    });
+  });
+
+
+
+  savePostToFile(newPost, function(err) {
+    if (err) {
+      res.status(404).send('Post not saved');
+      return;
+    }
+    console.log("here " + newPost.no);
+    res.redirect('/upload')
+  });
+});
+
+
+function savePostToFile(newPost, callback) {
+  fs.readFile('./postData.json', 'utf8', function readFileCallback(err, data){
+    if (err){
+      console.log(err);
+    } else {
+      var parsedData = JSON.parse(data);
+      parsedData.posts.push(newPost);
+      console.log("hehe " + newPost.no);
+      fs.writeFile('./postData.json', JSON.stringify(parsedData), 'utf8', callback);
     }
   });
 }

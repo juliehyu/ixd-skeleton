@@ -5,7 +5,7 @@ function requireUncached(module){
 
 exports.view = function(req, res){
     var data = requireUncached('../feedbackData.json');
-
+    //TODO: the user is always karen in this case
     var givenDataP = data.feedback.filter(element => element.evaluatorID == "karen" && element.category == "photography");
     var givenDataI = data.feedback.filter(element => element.evaluatorID == "karen" && element.category == "illustration");
     var givenDataG = data.feedback.filter(element => element.evaluatorID == "karen" && element.category == "graphicdesign");

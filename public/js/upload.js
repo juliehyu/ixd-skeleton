@@ -33,9 +33,6 @@ function inputImg(input){
     
     	reader.readAsDataURL(input.files[0]);
   	}
-	//var newImg = "source/images/" + document.getElementById("inpImg").files[0].name;
-	//console.log(newImg);
-	//$("#preview").attr("src", newImg);
 	$("i.rmv_initial").addClass("rmv_final");
 	$('#inpImg').attr('name', e.target.result);
 
@@ -50,30 +47,36 @@ function deleteImg(){
 
 function changeToPhotography(e) {
     e.preventDefault();
-    $("#dropdown1").html("Photography");
+	$("#dropdown1").html("Photography");
+	$("#hiddenCategory").attr("value", "photography");
 }
 
 function changeToIllustration(e) {
     e.preventDefault();
-    $("#dropdown1").html("Illustration");
+	$("#dropdown1").html("Illustration");
+	$("#hiddenCategory").attr("value", "illustration");
 }
 
 function changeToGraphicdesign(e) {
     e.preventDefault();
-    $("#dropdown1").html("Graphic Design");
+	$("#dropdown1").html("Graphic Design");
+	$("#hiddenCategory").attr("value", "graphicdesign");
 }
 
 function changeToPrompt1(e) {
 	e.preventDefault();
-    $("#dropdown2").text("About the color");
+	$("#dropdown2").text("About the color");
+	$("#hiddenPrompt").attr("value", "color");
 }
 
 function changeToPrompt2(e) {
 	e.preventDefault();
-    $("#dropdown2").text("About the layout");
+	$("#dropdown2").text("About the layout");
+	$("#hiddenPrompt").attr("value", "layout");
 }
 
 function changeToPrompt3(e) {
 	e.preventDefault();
-    $("#dropdown2").text("About the lighting");
+	$("#dropdown2").text("About the lighting");
+	$("#hiddenPrompt").attr("value", "lighting");
 }
