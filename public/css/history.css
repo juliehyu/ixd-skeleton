@@ -67,3 +67,8 @@
 	width: 10px;
 	height: 10px;
 }
+
+.ratingSubmit button{
+	position: relative;
+	margin-top: 5px;
+}
