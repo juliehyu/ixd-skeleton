@@ -13,23 +13,26 @@ function initializePage() {
     $("#3star").click(changeTo3Star);
     $("#4star").click(changeTo4Star);
     $("#5star").click(changeTo5Star);
+    $(".adding").click(add);
+    $(".subtracting").click(minus);
 }
 
 function add(){
-	
-	if (count != maxCount){
-		count += 1;
-		$('#numStars').html(count);
-	}
-	
+    var starItem = $(this).parents('.rating').find('h5')
+    var currentStar = starItem.text();
+    if (currentStar != maxCount){
+        currentStar++;
+        starItem.text(currentStar);
+    }	
 }
 
 function minus(){
-	if (count != minCount){
-		count -= 1;
-		$('#numStars').html(count);
-    }
-    
+    var starItem = $(this).parents('.rating').find('h5')
+    var currentStar = starItem.text();
+	if (currentStar != minCount){
+        currentStar--;
+        starItem.text(currentStar);
+    }	
 }
 
 function changeTo1Star(e) {
