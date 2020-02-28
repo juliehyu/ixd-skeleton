@@ -20,24 +20,31 @@ function initializePage() {
 function add(){
     var starItem = $(this).parents('.rating').find('h5')
     var currentStar = starItem.text();
+    var starInput = $(this).parents('.rating').parents('#rateFB').find('#hiddenStars');
     if (currentStar != maxCount){
         currentStar++;
         starItem.text(currentStar);
+        starInput.attr("value", currentStar);
     }	
 }
 
 function minus(){
     var starItem = $(this).parents('.rating').find('h5')
     var currentStar = starItem.text();
+    var starInput = $(this).parents('.rating').parents('#rateFB').find('#hiddenStars');
 	if (currentStar != minCount){
         currentStar--;
         starItem.text(currentStar);
+        starInput.attr("value", currentStar);
     }	
 }
 
 function changeTo1Star(e) {
     e.preventDefault();
     $("#dropdown").text("1");
+    var starInput = $(this).parentsUntil('form');
+    console.log(starInput.html());
+    starInput.attr("value", 1);
     console.log("1 star");
 }
 

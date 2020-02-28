@@ -185,3 +185,30 @@ function savePostToFile(newPost, callback) {
   });
 }
 
+app.get('/addStars', function(req, res) {
+  //TODO: the user is always karen in this case
+  var id = req.query.hiddenID;
+  var stars = req.query.hiddenStars;
+  
+  saveStarsToFile(id, stars, function(err) {
+    if (err) {
+      res.status(404).send('Stars not saved');
+      return;
+    }
+
+    res.redirect('/pageA')
+  });
+});
+
+
+function saveStarsToFile(id, stars, callback) {
+  fs.readFile('./feedbackData.json', 'utf8', function readFileCallback(err, data){
+    if (err){
+      console.log(err);
+    } else {
+      var parsedData = JSON.parse(data);
+      parsedData.feedback[id].stars = stars;
+      fs.writeFile('./feedbackData.json', JSON.stringify(parsedData), 'utf8', callback);
+    }
+  });
+}
