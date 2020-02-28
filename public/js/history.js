@@ -42,8 +42,7 @@ function minus(){
 function changeTo1Star(e) {
     e.preventDefault();
     $("#dropdown").text("1");
-    var starInput = $(this).parentsUntil('form');
-    console.log(starInput.html());
+    var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 1);
     console.log("1 star");
 }
@@ -51,23 +50,31 @@ function changeTo1Star(e) {
 function changeTo2Star(e) {
     e.preventDefault();
     $("#dropdown").text("2");
+    var starInput = $(this).parents('#rateFB').find('#hiddenStars');
+    starInput.attr("value", 2);
     console.log("2 star");
 }
 
 function changeTo3Star(e) {
     e.preventDefault();
     $("#dropdown").text("3");
+    var starInput = $(this).parents('#rateFB').find('#hiddenStars');
+    starInput.attr("value", 3);
     console.log("3 star");
 }
 
 function changeTo4Star(e) {
     e.preventDefault();
     $("#dropdown").text("4");
+    var starInput = $(this).parents('#rateFB').find('#hiddenStars');
+    starInput.attr("value", 4);
     console.log("4 star");
 }
 
 function changeTo5Star(e) {
     e.preventDefault();
     $("#dropdown").text("5");
+    var starInput = $(this).parents('#rateFB').find('#hiddenStars');
+    starInput.attr("value", 5);
     console.log("5 star");
 }

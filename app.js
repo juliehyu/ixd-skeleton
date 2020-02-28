@@ -185,11 +185,11 @@ function savePostToFile(newPost, callback) {
   });
 }
 
-app.get('/addStars', function(req, res) {
+app.get('/addStarsPageA', function(req, res) {
   //TODO: the user is always karen in this case
   var id = req.query.hiddenID;
   var stars = req.query.hiddenStars;
-  
+
   saveStarsToFile(id, stars, function(err) {
     if (err) {
       res.status(404).send('Stars not saved');
@@ -199,6 +199,24 @@ app.get('/addStars', function(req, res) {
     res.redirect('/pageA')
   });
 });
+
+
+app.get('/addStars', function(req, res) {
+  //TODO: the user is always karen in this case
+  var id = req.query.hiddenID;
+  var stars = req.query.hiddenStars;
+
+  saveStarsToFile(id, stars, function(err) {
+    if (err) {
+      res.status(404).send('Stars not saved');
+      return;
+    }
+
+    res.redirect('/history')
+  });
+});
+
+
 
 
 function saveStarsToFile(id, stars, callback) {
@@ -212,3 +230,4 @@ function saveStarsToFile(id, stars, callback) {
     }
   });
 }
+
