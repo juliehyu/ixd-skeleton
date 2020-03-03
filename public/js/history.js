@@ -15,6 +15,15 @@ function initializePage() {
     $("#5star").click(changeTo5Star);
     $(".adding").click(add);
     $(".subtracting").click(minus);
+    /*$('.subtracting').click(function() {
+        gtag('event', 'click', {'event_category': 'rating'});
+    });
+    $('.adding').click(function() {
+        gtag('event', 'click', {'event_category': 'rating'});
+    });
+    $('. btn myBtn dropdown-toggle').click(function() {
+        gtag('event', 'click', {'event_category': 'rating'});
+    });*/
 }
 
 function add(){
@@ -25,7 +34,8 @@ function add(){
         currentStar++;
         starItem.text(currentStar);
         starInput.attr("value", currentStar);
-    }	
+    }
+    gtag('event', 'click', {'event_category': 'rating'});	
 }
 
 function minus(){
@@ -36,7 +46,8 @@ function minus(){
         currentStar--;
         starItem.text(currentStar);
         starInput.attr("value", currentStar);
-    }	
+    }
+    gtag('event', 'click', {'event_category': 'rating'});	
 }
 
 function changeTo1Star(e) {
@@ -45,6 +56,7 @@ function changeTo1Star(e) {
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 1);
     console.log("1 star");
+    gtag('event', 'click', {'event_category': 'rating'});
 }
 
 function changeTo2Star(e) {
@@ -53,6 +65,7 @@ function changeTo2Star(e) {
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 2);
     console.log("2 star");
+    gtag('event', 'click', {'event_category': 'rating'});
 }
 
 function changeTo3Star(e) {
@@ -61,6 +74,7 @@ function changeTo3Star(e) {
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 3);
     console.log("3 star");
+    gtag('event', 'click', {'event_category': 'rating'});
 }
 
 function changeTo4Star(e) {
@@ -69,6 +83,7 @@ function changeTo4Star(e) {
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 4);
     console.log("4 star");
+    gtag('event', 'click', {'event_category': 'rating'});
 }
 
 function changeTo5Star(e) {
@@ -77,4 +92,5 @@ function changeTo5Star(e) {
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 5);
     console.log("5 star");
+    gtag('event', 'click', {'event_category': 'rating'});
 }
