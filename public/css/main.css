@@ -18,6 +18,13 @@ hr {
 br {
     line-height: 1rem;
 }
+
+h2 {
+    text-align: center;
+    color: white;
+    background-color: #7F867B;
+    font-size: 2rem;
+}
 .container{
     background-color: #E3E4E0;
 }

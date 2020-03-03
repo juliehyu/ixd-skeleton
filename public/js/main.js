@@ -3,39 +3,33 @@ $(document).ready(function() {
 	initializePage();
 })
 
-var count;
 function initializePage() {
     $("#skip").click(changeActive);
     $("#photography").click(changeToPhotography);
     $("#illustration").click(changeToIllustration);
     $("#graphicdesign").click(changeToGraphicdesign);
     console.log("intialize");
-    count = 0;
-    var current = $("#"+count);
+    localStorage.setItem("count", 0);
+    
+    var current = $("#0");
     current.attr('class', 'carousel-item active');
 
     var link = $("#linkToGiveFeedback");
-    var newLink = '/givefeedback/' + count;
+    var newLink = '/givefeedback/0';
     link.attr('href', newLink);
 }
 
 function changeActive(e) {
 	// Prevent following the link
 	e.preventDefault();
-    
-    console.log("before: ", count);
+    var count = parseInt(localStorage.getItem("count"));
     var currentPost= $("#"+count);
     currentPost.attr('class', 'carousel-item');
 
-
     count += 1;
+    localStorage.removeItem("count");
+    localStorage.setItem("count", count);
 
-    if (count == 3) {
-        count = 0;
-    }
-
-
-    console.log("after: ", count);
     var newPost = $("#"+count);
     newPost.attr('class', 'carousel-item active');
 
@@ -43,7 +37,6 @@ function changeActive(e) {
     var newLink = '/givefeedback/' + count;
     link.attr('href', newLink);
 }
-
 
 function changeToPhotography(e) {
     e.preventDefault();

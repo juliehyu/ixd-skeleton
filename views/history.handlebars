@@ -27,8 +27,8 @@
 	<div class="tab-content" id="pills-tabContent">
 	  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 	  	<h1 class="title">Sent History</h1>
-		  <h2>Photography</h2>
-		  	<div id="accordion">
+		  	<h2>Photography</h2>
+		  	<div id="accordionP">
 			{{#each givenP}}
 			<div class="card bg-light">
 				<div class="card-horizontal" id="headingOne">
@@ -44,7 +44,7 @@
 					</button>
 				</div>
 
-				<div id={{feedbackID}} class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+				<div id={{feedbackID}} class="collapse" aria-labelledby="headingOne" data-parent="#accordionP">
 				<div class="card-body">
 					{{questionResp}}
 					{{promptResp}}
@@ -53,187 +53,98 @@
 			</div>
 			{{/each}}
 			</div>
-
-			
-			{{!-- <div class="container-fluid">
-			    <div class="row">
-			        <div class="col-12 mt-3">
-			            <div class="card bg-light">
-			                <div class="card-horizontal">
-			                    <div class="img-square-wrapper">
-			      					<img src={{image}} class="works2" alt="...">
-			                    </div>
-			                    <div class="card-body">
-			                        <h4 class="card-title">RATING GOES HERE</h4>
-			                        <p class="card-text">{{questionResp}}</p>
-			                    </div>
-			                </div>
-			            </div>
-			        </div>
-			    </div>
-			</div> --}}
-			
-			<h2>Illustration</h2>
+		  	<h2>Illustration</h2>
+			<div id="accordionI">
 			{{#each givenI}}
-			<div class="container-fluid">
-			    <div class="row">
-			        <div class="col-12 mt-3">
-			            <div class="card bg-light">
-			                <div class="card-horizontal">
-			                    <div class="img-square-wrapper">
-			      					<img src={{image}} class="works2" alt="...">
-			                    </div>
-			                    <div class="card-body">
-			                        <h4 class="card-title">RATING GOES HERE</h4>
-			                        <p class="card-text">{{questionResp}}</p>
-			                    </div>
-			                </div>
-			            </div>
-			        </div>
-			    </div>
+			<div class="card bg-light">
+				<div class="card-horizontal" id="headingOne">
+					<div>
+					<button class="btn btn-link" data-toggle="collapse" data-target="#{{feedbackID}}" aria-expanded="false" aria-controls={{feedbackID}}>
+					<div class="img-square-wrapper">
+						<img src={{image}} class="works2" alt="...">
+					</div>
+					</div>
+					<div>
+						<p class="card-text">This work is by {{userID}}</p>
+					</div>
+					</button>
+				</div>
+
+				<div id={{feedbackID}} class="collapse" aria-labelledby="headingOne" data-parent="#accordionI">
+				<div class="card-body">
+					{{questionResp}}
+					{{promptResp}}
+				</div>
+				</div>
 			</div>
 			{{/each}}
+			</div>
 			<h2>Graphic Design</h2>
+			<div id="accordionG">
 			{{#each givenG}}
-			<div class="container-fluid">
-			    <div class="row">
-			        <div class="col-12 mt-3">
-			            <div class="card bg-light">
-			                <div class="card-horizontal">
-			                    <div class="img-square-wrapper">
-			      					<img src={{image}} class="works2" alt="...">
-			                    </div>
-			                    <div class="card-body">
-			                        <h4 class="card-title">RATING GOES HERE</h4>
-			                        <p class="card-text">{{questionResp}}</p>
-			                    </div>
-			                </div>
-			            </div>
-			        </div>
-			    </div>
+			<div class="card bg-light">
+				<div class="card-horizontal" id="headingOne">
+					<div>
+					<button class="btn btn-link" data-toggle="collapse" data-target="#{{feedbackID}}" aria-expanded="false" aria-controls={{feedbackID}}>
+					<div class="img-square-wrapper">
+						<img src={{image}} class="works2" alt="...">
+					</div>
+					</div>
+					<div>
+						<p class="card-text">This work is by {{userID}}</p>
+					</div>
+					</button>
+				</div>
+
+				<div id={{feedbackID}} class="collapse" aria-labelledby="headingOne" data-parent="#accordionG">
+				<div class="card-body">
+					{{questionResp}}
+					{{promptResp}}
+				</div>
+				</div>
 			</div>
 			{{/each}}
+			</div>
 	  </div>
 
 	  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 	  	<h1 class="title">Recieved History</h1>
 		<h2>Photography</h2>
 		{{#if showPageA}} 
-		{{#each receivedP}}
-		<div class="container-fluid">
-		    <div class="row">
-		        <div class="col-12 mt-3">
-		            <div class="card">
-		                <div class="card-horizontal">
-		                    <div class="img-square-wrapper">
-		      					<img src={{image}} class="works2" alt="...">
-		                    </div>
-		                    <div class="card-body">
-
-		                    	<form id="rateFB" role="form" method="get" action="/addStarsPageA">
-			                    		<div class = "rating">
-			                        		<a class = "subtracting"><i class="fas fa-minus-circle" style="color: red"></i></a>
-			                        		<i class="fas fa-star" ></i> 
-			                        		<h5 id="numStars" name = "totalStars"> 0 </h5>
-											<a class = "adding"><i class="fas fa-plus-circle" style="color: red"></i></a>
-			                        	</div>
-										<input id="hiddenStars" name="hiddenStars" type="hidden" value="">
-										<input id="hiddenID" name="hiddenID" type="hidden" value={{feedbackID}}>
-			                        	<div class = "ratingSubmit">
-				                        	<button type="submit" class="btn myBtn">
-													<a style="color:white">Submit</a>
-											</button>
-										</div>
-			                    </form>
-		                        <p class="card-text">{{questionResp}}</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		{{/each}}
+			{{#each receivedP}}
+				{{>ratingA}}
+			{{/each}}
 		{{else}}
-		{{#each receivedP}}
-		<div class="container-fluid">
-		    <div class="row">
-		        <div class="col-12 mt-3">
-		            <div class="card">
-		                <div class="card-horizontal">
-		                    <div class="img-square-wrapper">
-		      					<img src={{image}} class="works2" alt="...">
-		                    </div>
-		                    <div class="card-body">
-								<form id="rateFB" role="form" method="get" action="/addStars">
-			                    		<div class = "ratingA">
-			                        		<button class="btn myBtn dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown"><i class="fas fa-star" style="color: white"></i> -- </button>
-											  <ul class="dropdown-menu dropdown-menu-center">
-											    <li><a href="#" id="1star">1</a></li>
-											    <li><a href="#" id="2star">2</a></li>
-											    <li><a href="#" id="3star">3</a></li>
-											    <li><a href="#" id="4star">4</a></li>
-											    <li><a href="#" id="5star">5</a></li>
-											  </ul>
-			                        	</div>
-										<input id="hiddenStars" name="hiddenStars" type="hidden" value="">
-										<input id="hiddenID" name="hiddenID" type="hidden" value={{feedbackID}}>
-			                        	<div class = "ratingSubmit">
-				                        	<button type="submit" class="btn myBtn">
-													<a style="color:white">Submit</a>
-											</button>
-										</div>
-			                    </form>
-		                        <p class="card-text">{{questionResp}}</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		{{/each}}
-			                    
+			{{#each receivedP}}
+				{{>ratingB}}
+			{{/each}}                 
 		{{/if}}
-		<h2>Illustration</h2>
-		{{#each receivedI}}
 
-		<div class="container-fluid">
-		    <div class="row">
-		        <div class="col-12 mt-3">
-		            <div class="card">
-		                <div class="card-horizontal">
-		                    <div class="img-square-wrapper">
-		      					<img src={{image}} class="works2" alt="...">
-		                    </div>
-		                    <div class="card-body">
-		                        <h4 class="card-title">RATING GOES HERE</h4>
-		                        <p class="card-text">{{questionResp}}</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		{{/each}}
+
+
+		<h2>Illustration</h2>
+		{{#if showPageA}} 
+			{{#each receivedI}}
+				{{>ratingA}}
+			{{/each}}
+		{{else}}
+			{{#each receivedI}}
+				{{>ratingB}}
+			{{/each}}                 
+		{{/if}}
+
+
+		
 		<h2>Graphic Desgign</h2>
-		{{#each receivedG}}
-		<div class="container-fluid">
-		    <div class="row">
-		        <div class="col-12 mt-3">
-		            <div class="card">
-		                <div class="card-horizontal">
-		                    <div class="img-square-wrapper">
-		      					<img src={{image}} class="works2" alt="...">
-		                    </div>
-		                    <div class="card-body">
-		                        <h4 class="card-title">RATING GOES HERE</h4>
-		                        <p class="card-text">{{questionResp}}</p>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		{{/each}}
+		{{#if showPageA}} 
+			{{#each receivedG}}
+				{{>ratingA}}
+			{{/each}}
+		{{else}}
+			{{#each receivedG}}
+				{{>ratingB}}
+			{{/each}}                 
+		{{/if}}
 	  </div>
 	</div>
 

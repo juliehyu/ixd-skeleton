@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="card">
+                <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                        <img src={{image}} class="works2" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <form id="rateFB" role="form" method="get" action="/addStars">
+                                <div class = "ratingA">
+                                    <button class="btn myBtn dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown"><i class="fas fa-star" style="color: white"></i> -- </button>
+                                        <ul class="dropdown-menu dropdown-menu-center">
+                                        <li><a href="#" id="1star">1</a></li>
+                                        <li><a href="#" id="2star">2</a></li>
+                                        <li><a href="#" id="3star">3</a></li>
+                                        <li><a href="#" id="4star">4</a></li>
+                                        <li><a href="#" id="5star">5</a></li>
+                                        </ul>
+                                </div>
+                                <input id="hiddenStars" name="hiddenStars" type="hidden" value="">
+                                <input id="hiddenID" name="hiddenID" type="hidden" value={{feedbackID}}>
+                                <div class = "ratingSubmit">
+                                    <button type="submit" class="btn myBtn">
+                                            <a style="color:white">Submit</a>
+                                    </button>
+                                </div>
+                        </form>
+                        <p class="card-text">{{questionResp}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -61,20 +61,7 @@
 	  </div>
 	</form >
 
-	<hr/>
-	<h1 class="title">My Posts</h1>
-	{{#if empty}}
-		<div>You don't have any post yet.</div>
-	{{/if}}
-	{{#each userPosts}}
-		<div id={{no}}>
-			<img class="upload-wrapper" src={{image}}>
-			<p class = "uploadQuestion">{{category}}</p>
-			<p class = "uploadQuestion">{{question}}</p>
-			<p class = "uploadQuestion">{{prompt}}</p>
-
-		</div>
-	{{/each}}
+	
 
 	{{> navbar}}
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -65,18 +65,18 @@ function changeToGraphicdesign(e) {
 
 function changeToPrompt1(e) {
 	e.preventDefault();
-	$("#dropdown2").text("About the color");
-	$("#hiddenPrompt").attr("value", "color");
+	$("#dropdown2").text("How is the color?");
+	$("#hiddenPrompt").attr("value", "How is the color?");
 }
 
 function changeToPrompt2(e) {
 	e.preventDefault();
-	$("#dropdown2").text("About the layout");
-	$("#hiddenPrompt").attr("value", "layout");
+	$("#dropdown2").text("How is the layout?");
+	$("#hiddenPrompt").attr("value", "How is the layout?");
 }
 
 function changeToPrompt3(e) {
 	e.preventDefault();
-	$("#dropdown2").text("About the lighting");
-	$("#hiddenPrompt").attr("value", "lighting");
+	$("#dropdown2").text("How is the lighting?");
+	$("#hiddenPrompt").attr("value", "How is the lighting?");
 }

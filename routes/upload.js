@@ -4,10 +4,5 @@ function requireUncached(module){
 }
 
 exports.view = function(req, res){
-  var data = requireUncached('../postData.json');
-  var posts = data.posts.filter(element => element.userID == "karen");
-  var filteredData = {
-    "userPosts": posts
-  }
-  res.render('upload', filteredData);
+  res.render('upload');
 };

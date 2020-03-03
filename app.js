@@ -76,7 +76,8 @@ app.get('/givefeedback', function(req, res) {
     image: req.query.image,
     questionResp: req.query.answer1,
     promptResp: req.query.answer2,
-    stars: null
+    stars: null,
+    rated: false
   }
 
   fs.readFile('./nextFeedbackID.json', 'utf8', function readFile(err, data){
@@ -226,6 +227,7 @@ function saveStarsToFile(id, stars, callback) {
     } else {
       var parsedData = JSON.parse(data);
       parsedData.feedback[id].stars = stars;
+      parsedData.feedback[id].rated = true;
       fs.writeFile('./feedbackData.json', JSON.stringify(parsedData), 'utf8', callback);
     }
   });
