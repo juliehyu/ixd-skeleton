@@ -9,8 +9,8 @@
 			"image":"../source/images/photo_1.jpg",
 			"questionResp":"I think is very good. No need to change.",
 			"promptResp":"I like how the background fades.",
-			"stars":5,
-			"rated":true 
+			"stars":null,
+			"rated":false 
 		},
 		{
 			"no":"1",
@@ -21,7 +21,8 @@
 			"image":"../source/images/photo_2.jpg",
 			"questionResp":"I think is very good. No need to change.",
 			"promptResp":"I like how the background fades.",
-			"stars":2,"rated":true
+			"stars":null,
+			"rated":false
 		},
 		{
 			"no":"2",
@@ -32,8 +33,8 @@
 			"image":"../source/images/photo_3.jpg",
 			"questionResp":"I think is very good. No need to change.",
 			"promptResp":"I like how the background fades.",
-			"stars":"3",
-			"rated":true
+			"stars":null,
+			"rated":false
 		},
 		{
 			"no":"3",
