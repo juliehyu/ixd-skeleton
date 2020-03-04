@@ -35,7 +35,7 @@ function add(){
         starItem.text(currentStar);
         starInput.attr("value", currentStar);
     }
-    gtag('event', 'click', {'event_category': 'rating'});	
+    ga('send', 'event', 'rating', 'click');
 }
 
 function minus(){
@@ -47,7 +47,7 @@ function minus(){
         starItem.text(currentStar);
         starInput.attr("value", currentStar);
     }
-    gtag('event', 'click', {'event_category': 'rating'});	
+    ga('send', 'event', 'rating', 'click');
 }
 
 function changeTo1Star(e) {
@@ -56,7 +56,7 @@ function changeTo1Star(e) {
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 1);
     console.log("1 star");
-    gtag('event', 'click', {'event_category': 'rating'});
+    ga('send', 'event', 'rating', 'click');
 }
 
 function changeTo2Star(e) {
@@ -65,7 +65,7 @@ function changeTo2Star(e) {
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 2);
     console.log("2 star");
-    gtag('event', 'click', {'event_category': 'rating'});
+    ga('send', 'event', 'rating', 'click');
 }
 
 function changeTo3Star(e) {
@@ -74,7 +74,7 @@ function changeTo3Star(e) {
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 3);
     console.log("3 star");
-    gtag('event', 'click', {'event_category': 'rating'});
+    ga('send', 'event', 'rating', 'click');
 }
 
 function changeTo4Star(e) {
@@ -83,7 +83,7 @@ function changeTo4Star(e) {
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 4);
     console.log("4 star");
-    gtag('event', 'click', {'event_category': 'rating'});
+    ga('send', 'event', 'rating', 'click');
 }
 
 function changeTo5Star(e) {
@@ -92,5 +92,5 @@ function changeTo5Star(e) {
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 5);
     console.log("5 star");
-    gtag('event', 'click', {'event_category': 'rating'});
+    ga('send', 'event', 'rating', 'click');
 }
