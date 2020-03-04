@@ -15,15 +15,8 @@ function initializePage() {
     $(".5star").click(changeTo5Star);
     $(".adding").click(add);
     $(".subtracting").click(minus);
-    /*$('.subtracting').click(function() {
-        gtag('event', 'click', {'event_category': 'rating'});
-    });
-    $('.adding').click(function() {
-        gtag('event', 'click', {'event_category': 'rating'});
-    });
-    $('. btn myBtn dropdown-toggle').click(function() {
-        gtag('event', 'click', {'event_category': 'rating'});
-    });*/
+    $("#submitBtn").click(submitEvent);
+
 }
 
 
@@ -100,4 +93,13 @@ function changeTo5Star(e) {
     starInput.attr("value", 5);
     console.log("5 star");
     ga('send', 'event', 'rating', 'click');
+}
+$(document).ready(function() {
+    initializePage();
+})
+
+function submitEvent(e){
+    e.preventDefault();
+   ga('send', 'event', 'submit', 'click');
+   console.log("submit");
 }
