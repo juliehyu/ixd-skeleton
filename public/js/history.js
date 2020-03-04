@@ -7,12 +7,12 @@ var minCount;
 function initializePage() {
 	maxCount = 5;
 	minCount = 0;
-	count = 0;
-	$("#1star").click(changeTo1Star);
-    $("#2star").click(changeTo2Star);
-    $("#3star").click(changeTo3Star);
-    $("#4star").click(changeTo4Star);
-    $("#5star").click(changeTo5Star);
+    count = 0;
+	$(".1star").click(changeTo1Star);
+    $(".2star").click(changeTo2Star);
+    $(".3star").click(changeTo3Star);
+    $(".4star").click(changeTo4Star);
+    $(".5star").click(changeTo5Star);
     $(".adding").click(add);
     $(".subtracting").click(minus);
     /*$('.subtracting').click(function() {
@@ -25,6 +25,8 @@ function initializePage() {
         gtag('event', 'click', {'event_category': 'rating'});
     });*/
 }
+
+
 
 function add(){
     var starItem = $(this).parents('.rating').find('h5')
@@ -52,7 +54,8 @@ function minus(){
 
 function changeTo1Star(e) {
     e.preventDefault();
-    $("#dropdown").text("1");
+    var dropdownText = $(this).parents('#rateFB').find('.ratingA').find('.myBtn');
+    dropdownText.html('<i class="fas fa-star" style="color: white"></i> 1 ');
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 1);
     console.log("1 star");
@@ -61,7 +64,8 @@ function changeTo1Star(e) {
 
 function changeTo2Star(e) {
     e.preventDefault();
-    $("#dropdown").text("2");
+    var dropdownText = $(this).parents('#rateFB').find('.ratingA').find('.myBtn');
+    dropdownText.html('<i class="fas fa-star" style="color: white"></i> 2 ');
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 2);
     console.log("2 star");
@@ -70,7 +74,8 @@ function changeTo2Star(e) {
 
 function changeTo3Star(e) {
     e.preventDefault();
-    $("#dropdown").text("3");
+    var dropdownText = $(this).parents('#rateFB').find('.ratingA').find('.myBtn');
+    dropdownText.html('<i class="fas fa-star" style="color: white"></i> 3 ');
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 3);
     console.log("3 star");
@@ -79,7 +84,8 @@ function changeTo3Star(e) {
 
 function changeTo4Star(e) {
     e.preventDefault();
-    $("#dropdown").text("4");
+    var dropdownText = $(this).parents('#rateFB').find('.ratingA').find('.myBtn');
+    dropdownText.html('<i class="fas fa-star" style="color: white"></i> 4 ');
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 4);
     console.log("4 star");
@@ -88,7 +94,8 @@ function changeTo4Star(e) {
 
 function changeTo5Star(e) {
     e.preventDefault();
-    $("#dropdown").text("5");
+    var dropdownText = $(this).parents('#rateFB').find('.ratingA').find('.myBtn');
+    dropdownText.html('<i class="fas fa-star" style="color: white"></i> 5 ');
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 5);
     console.log("5 star");
