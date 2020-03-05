@@ -9,16 +9,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{> facebook}}
 	<script src="js/facebook.js"></script>
-	<title>Dconstruct</title>
 </head>
 <body>
 {{!-- <div id="fb-root"></div> --}}
 {{!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=772757316541625&autoLogAppEvents=1"></script> --}}
 <div class="container" id="login">
-    <img src="source/D.png" id="logo"/>
+    <img src="source/dconstruct-name.jpg" id="logo"/>
 
-    <h2 class="title" id="welcome">Welcome to Dconstruct!</h2>
-    <p id="subwelcome">Share your work and get great feedback here.</p>
+    
+    <h4 id="subwelcome">Share your content and grow from great feedback!</h4>
     
 
     <form class="myForm text-center" id="loginForm" role="form" method="get" action="/main" >
@@ -34,7 +33,7 @@
 	</form>
     
     <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="false" scope="public_profile,email" onlogin="checkLoginState();"></div>
-    <p class="facebookLogin">Please login through Facebook</p>
+    
 
 
 </div>

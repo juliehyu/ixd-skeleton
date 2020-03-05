@@ -68,7 +68,8 @@
 			"image":"../source/images/illustration_2.jpg",
 			"questionResp":"I think is very good. No need to change.",
 			"promptResp":"I like how the background fades.",
-			"stars":null,"rated":false
+			"stars":null,
+			"rated":false
 		},
 		{
 			"no":"6",

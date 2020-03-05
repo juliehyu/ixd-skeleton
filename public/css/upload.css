@@ -1,6 +1,4 @@
-.title{
-    color: #7F867B;
-}
+
 
 /*input[type="file"] {
     display: none;
@@ -52,4 +50,7 @@ a.disabled{
 
 p {  
 	text-align: center;
+}
+label {
+	color: #516a9e;
 }
