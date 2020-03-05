@@ -7,9 +7,7 @@
                         <img src={{image}} class="works2" alt="...">
                     </div>
                     <div class="card-body">
-                        {{#if rated}}
-                        <div>{{stars}}</div>
-                        {{else}}
+
                         <form id="rateFB" role="form" method="get" action="/addStarsPageA">
                                 <div class = "rating">
                                     <a class = "subtracting"><i class="fas fa-minus-circle" style="color: red"></i></a>
@@ -25,7 +23,7 @@
                                     </button>
                                 </div>
                         </form>
-                        {{/if}}
+                      
                         <p class="card-text">{{questionResp}}</p>
                     </div>
                 </div>
