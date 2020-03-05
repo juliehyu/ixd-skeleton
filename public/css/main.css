@@ -137,6 +137,7 @@ a {
 #categoryDropdown {
     margin-top: 2rem;
 }
+
 .myBtn {
     width: 15rem;
     background-color: #ff7d6c;
@@ -236,7 +237,7 @@ a {
     font-weight: 800;
 }
 .fa-star{
-    color: rgb(153, 134, 102);
+    color: #ff7d6c;
 }
 /* Navigation bar */
 .bottomNav{

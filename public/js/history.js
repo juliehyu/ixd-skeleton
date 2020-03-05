@@ -45,7 +45,7 @@ function minus(){
 
 function changeTo1Star(e) {
     e.preventDefault();
-    var dropdownText = $(this).parents('#rateFB').find('.ratingA').find('.myBtn');
+    var dropdownText = $(this).parents('#rateFB').find('.rating').find('.myBtn');
     dropdownText.html('<i class="fas fa-star" style="color: white"></i> 1 ');
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 1);
@@ -55,7 +55,7 @@ function changeTo1Star(e) {
 
 function changeTo2Star(e) {
     e.preventDefault();
-    var dropdownText = $(this).parents('#rateFB').find('.ratingA').find('.myBtn');
+    var dropdownText = $(this).parents('#rateFB').find('.rating').find('.myBtn');
     dropdownText.html('<i class="fas fa-star" style="color: white"></i> 2 ');
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 2);
@@ -65,7 +65,7 @@ function changeTo2Star(e) {
 
 function changeTo3Star(e) {
     e.preventDefault();
-    var dropdownText = $(this).parents('#rateFB').find('.ratingA').find('.myBtn');
+    var dropdownText = $(this).parents('#rateFB').find('.rating').find('.myBtn');
     dropdownText.html('<i class="fas fa-star" style="color: white"></i> 3 ');
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 3);
@@ -75,7 +75,7 @@ function changeTo3Star(e) {
 
 function changeTo4Star(e) {
     e.preventDefault();
-    var dropdownText = $(this).parents('#rateFB').find('.ratingA').find('.myBtn');
+    var dropdownText = $(this).parents('#rateFB').find('.rating').find('.myBtn');
     dropdownText.html('<i class="fas fa-star" style="color: white"></i> 4 ');
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 4);
@@ -85,7 +85,7 @@ function changeTo4Star(e) {
 
 function changeTo5Star(e) {
     e.preventDefault();
-    var dropdownText = $(this).parents('#rateFB').find('.ratingA').find('.myBtn');
+    var dropdownText = $(this).parents('#rateFB').find('.rating').find('.myBtn');
     dropdownText.html('<i class="fas fa-star" style="color: white"></i> 5 ');
     var starInput = $(this).parents('#rateFB').find('#hiddenStars');
     starInput.attr("value", 5);

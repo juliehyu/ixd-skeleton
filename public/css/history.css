@@ -38,35 +38,37 @@ h2 {
 	text-align: center;
 }
 
-.rating {
+
+#rateFB {
 	display: flex;
 	justify-content: space-between;
-	width: 100px;
+	width: 20rem;
+	align-items: center;
+	margin: 0;
+	margin-bottom: 1rem;
 }
 
-.rating i{
-	position: relative;
-	top: 10px;
-	width: 10px;
-	height: 10px;
+
+#rateFB .rating{
+	margin-top: auto;
+	width: 8rem;
+	height: 3rem;
+}
+
+#rateFB .myBtn {
+	margin-top: auto;
+	width: 8rem;
+	height: 3rem;
 }
 
 .card-text{
+	margin-top: 5rem;
 	width: 160px;
 }
 
-.ratingA {
-	display: flex;
-	justify-content: left;
-	width: 100px;
-}
-}
-.ratingA i{
-	position: relative;
-	top: 4px;
-	width: 10px;
-	height: 10px;
-}
+
+
+
 
 .ratingSubmit button{
 	position: relative;

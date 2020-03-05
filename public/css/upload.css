@@ -1,15 +1,3 @@
-
-
-/*input[type="file"] {
-    display: none;
-}
-.custom-file-upload {
-    border: 1px solid #ccc;
-    display: inline-block;
-    padding: 6px 12px;
-    cursor: pointer;
-}*/
-
 .upload-wrapper{
 	margin-top: 25px;
 	margin-left: auto;
@@ -53,4 +41,10 @@ p {
 }
 label {
 	color: #516a9e;
+}
+
+#popover {
+	position: absolute;
+	top: 360px;
+	left: 260px;
 }

@@ -10,7 +10,8 @@ function initializePage() {
 	
 	$("#prompt1").click(changeToPrompt1);
     $("#prompt2").click(changeToPrompt2);
-    $("#prompt3").click(changeToPrompt3);
+	$("#prompt3").click(changeToPrompt3);
+	$('[data-toggle="popover"]').popover()
 }
 
 function inputFile(){
@@ -28,13 +29,14 @@ function inputImg(input){
     
     	reader.onload = function(e) {
       		$('#preview').attr('src', e.target.result);
-      		//$('#inpImg').attr('name', e.target.result);
+			  //$('#inpImg').attr('name', e.target.result);
     	}
     
     	reader.readAsDataURL(input.files[0]);
   	}
 	$("i.rmv_initial").addClass("rmv_final");
 	$('#inpImg').attr('name', e.target.result);
+	
 
 }
 
