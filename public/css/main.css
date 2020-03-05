@@ -5,28 +5,34 @@ html {
 }
 
 body {
-    font-family: 'Old Standard TT', serif;
+    font-family: 'Montserrat';
     height: 100%;
     overflow: auto;
     margin: 0;
 }
 
 hr {
-    border-top: solid 2px;
+    border-top: solid 1px white;
 }
 
 br {
     line-height: 1rem;
 }
+h1 {
+    font-family: "Montserrat";
+}
 
 h2 {
     text-align: center;
     color: white;
-    background-color: #7F867B;
+    background-color: #516a9e;
     font-size: 2rem;
 }
+a {
+    font-family: "Montserrat";
+}
 .container{
-    background-color: #E3E4E0;
+    background-color: #516a9e;
 }
 
 .card-horizontal {
@@ -41,17 +47,17 @@ h2 {
     bottom: 0;
     right: 0;
     overflow: auto;
-    background: #E3E4E0; /* Just to visualize the extent */
+    background: #516a9e; /* Just to visualize the extent */
     margin: auto;
     text-align: center;
 }
 
 .topNav{
     height: 3rem;
-    background-color: #C7C7BB !important;
+    background-color: #516a9e !important;
     display: flex;
     align-items: center;
-    color: #7F867B;
+    color: #ffffff !important;
     vertical-align: middle;
     position: fixed; 
 }
@@ -101,7 +107,7 @@ h2 {
 
 .topInfo p{
     float: right;
-    color: #7F867B;
+    color: #ff7d6c;
 }
 .works{
     margin-top: 3rem;
@@ -132,30 +138,33 @@ h2 {
     margin-top: 2rem;
 }
 .myBtn {
-    width: 12rem;
-    background-color: #7F867B;
+    width: 15rem;
+    background-color: #ff7d6c;
     color: white;
 }
 
 .myBtn-hollow {
     width: 12rem;
     background-color: transparent;
-    color: #7F867B;
-    border: solid 1px #7F867B;
+    color: #ff7d6c;
+    border: solid 1px #ff7d6c;
 }
 
 .myBtn-hollow-long {
     width: 12rem;
     background-color: transparent;
-    color: #7F867B;
-    border: solid 1px #7F867B;
+    color: #ff7d6c;
+    border: solid 1px #ff7d6c;
     width: 100%;
 }
+.dropdown-menu {
+    color: #516a9e;
+}
 .myForm {
-    color: #7F867B;
+    color: #ff7d6c;
 }
 .myInput {
-    border-color: #7F867B;
+    border-color: #ff7d6c;
 }
 
 .marginTop {
@@ -166,35 +175,35 @@ h2 {
     margin: 10px auto;
     padding: 0.5rem;
     display: block;
-    border: solid 2px #7F867B;
+    border: solid 2px #ff7d6c;
     border-radius: 5px;
     width: 10rem;
     text-align: center;
-    color: #7F867B;
+    color: #ff7d6c;
 }
 
 .buttonContainer button{
     margin: 10px auto;
     padding: 0.5rem;
     display: block;
-    border: solid 2px #7F867B;
+    border: solid 2px #ff7d6c;
     border-radius: 5px;
     width: 10rem;
 }
 
 .buttonContainer p{
     text-align: center;
-    color: #7F867B;
+    color: #ff7d6c;
 }
 
 /* Dummy divs */
 .topper{
     height: 5rem;
-    background-color: #E3E4E0;
+    background-color: #516a9e;
 }
 .footer{
     height: 10rem;
-    background-color: #E3E4E0;
+    background-color: #516a9e;
 }
 
 
@@ -233,19 +242,20 @@ h2 {
 .bottomNav{
     height: 3rem;
     overflow: hidden;
-    background-color: #C7C7BB;
+    background-color: #516a9e;
     position: fixed; 
     bottom: 0; 
     width: 100%; 
     display: flex;
     justify-content: space-between;
+    
 }
 
 
 .bottomNav a{
     float: center;
     display: block;
-    color: #7F867B;
+    color: #ffffff;
     text-align: center;
     padding: 16px 15px;
     text-decoration: none;
@@ -253,7 +263,7 @@ h2 {
 
 .bottomNav a:hover {
     background: #ddd;
-    color: black;
+    color: #445a87;
 }
 
 .bottomMargin {
@@ -269,7 +279,7 @@ h2 {
 }
 
 .title{
-    color: #7F867B;
+    color: #516a9e;
 }
 
 
@@ -288,7 +298,7 @@ h1{
 /* For link */
 a {
     text-decoration: none;
-    color: #7F867B;
+    color: #ff7d6c;
 }
 
 
@@ -299,17 +309,21 @@ a {
 
 #subwelcome{
     margin-bottom: 2rem;
+    width: 350;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ff7d6c;
 }
 
 #logo{
-    width: 10rem;
-    height: 10rem;
-    margin-top: 12rem;
-    margin-bottom: 2rem;
+    width: 300px;
+    height: 150px;
+    margin-top: 80px;
+    margin-bottom: 10px;
 }
 
-#loginBtn{
-    margin-bottom: 1rem;
+#submitBtn{
+    margin-bottom: 10px;
 }
 .dropdown-menu-center {
   float: none;
@@ -320,14 +334,15 @@ a {
 
 .nav-item {
     background-color: white !important; 
-    color: #7F867B !important;
+    color: #ff7d6c !important;
     border: solid 0px !important;
     font-size: 2rem;
+  
 }
 
 .nav-item .active{
     background-color: white !important; 
-    color: #7F867B !important;
-    border: solid 3px #7F867B!important;
-}
+    color: #ff7d6c !important;
+    border: solid 3px #ff7d6c!important;
 
+}
