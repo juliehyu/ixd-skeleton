@@ -5,9 +5,13 @@ function requireUncached(module){
 
 exports.view = function(req, res){
     var data = requireUncached('../postData.json');
-    var posts = data.posts.filter(element => element.userID == "karen");
+    var postsP = data.posts.filter(element => element.userID == "karen" && element.category == "photography");
+    var postsI = data.posts.filter(element => element.userID == "karen" && element.category == "illustration");
+    var postsG = data.posts.filter(element => element.userID == "karen" && element.category == "graphicdesign");
     var filteredData = {
-      "userPosts": posts
+      "userPostsP": postsP,
+      "userPostsI": postsI,
+      "userPostsG": postsG
     }
     res.render('profile', filteredData);
 };

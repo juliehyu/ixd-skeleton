@@ -15,6 +15,7 @@
 <body>
 <div>
 	{{> topnav}}
+	<div class="shiftDown"></div>
 	<h1 class="title">Give Feedback</h1>
 	<div class="dropdown text-center" id="categoryDropdown">
 	  <button class="btn myBtn dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown">Photography</button>
@@ -25,28 +26,85 @@
 	  </ul>
 	</div>
 
-	<div id="carouselExampleControls" class="carousel slide" data-ride="false">
-		<div class="works carousel-inner">
-			{{#each posts}}
-				<div class="carousel-item" id={{no}}>
-					<img class="d-block w-100" src={{image}}>
-				</div>
-			{{/each}}
+	<div id="P">
+		<div class="posts">
+		<div id="carouselExampleControls" class="carousel slide" data-ride="false">
+			<div class="works carousel-inner">
+				{{#each PostsP}}
+					<div class="carousel-item" id={{no}}>
+						<img class="d-block w-100" src={{image}}>
+					</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div class="text-center">
+			<button type="button" class="btn myBtn">
+				<a style="color:white" id="linkToGiveFeedback">Give Feedback</a>
+			</button>
+			<br>
+			<br>
+			<button type="submit" class="btn myBtn" id="skipP">
+				<a style="color:white" data-slide="next">Skip</a>
+			</button>
+			<p>A skip will cost 1 star</p>
+		</div>
 		</div>
 	</div>
 
 
-	<div class="text-center">
-		<button type="button" class="btn myBtn">
-		  	<a style="color:white" id="linkToGiveFeedback">Give Feedback</a>
-		</button>
-		<br>
-		<br>
-		<button type="button" class="btn myBtn" id="skip">
-			<a style="color:white" href="#myCarousel" href="#myCarousel" role="button" data-slide="next">Skip</a>
-		</button>
-		<p>You have 3 skips left</p>
+	<div id="I">
+		<div class="posts">
+		<div id="carouselExampleControls" class="carousel slide" data-ride="false">
+			<div class="works carousel-inner">
+				{{#each PostsI}}
+					<div class="carousel-item" id={{no}}>
+						<img class="d-block w-100" src={{image}}>
+					</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div class="text-center">
+			<button type="button" class="btn myBtn">
+				<a style="color:white" id="linkToGiveFeedback">Give Feedback</a>
+			</button>
+			<br>
+			<br>
+			<button type="submit" class="btn myBtn" id="skipI">
+				<a style="color:white" data-slide="next">Skip</a>
+			</button>
+			<p>A skip will cost 1 star</p>
+		</div>
+		</div>
 	</div>
+
+	<div id="G">
+		<div class="posts">
+		<div id="carouselExampleControls" class="carousel slide" data-ride="false">
+			<div class="works carousel-inner">
+				{{#each PostsG}}
+					<div class="carousel-item" id={{no}}>
+						<img class="d-block w-100" src={{image}}>
+					</div>
+				{{/each}}
+			</div>
+		</div>
+
+		<div class="text-center">
+			<button type="button" class="btn myBtn">
+				<a style="color:white" id="linkToGiveFeedback">Give Feedback</a>
+			</button>
+			<br>
+			<br>
+			<button type="submit" class="btn myBtn" id="skipG">
+				<a style="color:white" data-slide="next">Skip</a>
+			</button>
+			<p>A skip will cost 1 star</p>
+		</div>
+		</div>
+	</div>
+
 
 	{{> navbar}}
 

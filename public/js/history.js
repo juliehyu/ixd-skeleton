@@ -15,10 +15,8 @@ function initializePage() {
     $(".5star").click(changeTo5Star);
     $(".adding").click(add);
     $(".subtracting").click(minus);
-    $("#submitBtn").click(submitEvent);
-
+    // $(".submitBtn").click(submitEvent);
 }
-
 
 
 function add(){
@@ -94,12 +92,9 @@ function changeTo5Star(e) {
     console.log("5 star");
     ga('send', 'event', 'rating', 'click');
 }
-$(document).ready(function() {
-    initializePage();
-})
 
-function submitEvent(e){
-    e.preventDefault();
-   ga('send', 'event', 'submit', 'click');
-   console.log("submit");
-}
+// function submitEvent(e){
+//    e.preventDefault();
+//    ga('send', 'event', 'submit', 'click');
+//    console.log("submit");
+// }

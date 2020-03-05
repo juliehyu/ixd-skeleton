@@ -61,7 +61,24 @@ http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 
+app.get('/skip', function(req, res){
+  fs.readFile('./myStars.json', 'utf8', function readFile(err, data){
+    var parsedData = JSON.parse(data);
+    
+    console.log("Read stars " + parsedData.myStars);
 
+    var newObj = {
+      myStars: parsedData.myStars - 1
+    }
+    console.log("New stars " + newObj.myStars);
+
+
+    fs.writeFile('./myStars.json', JSON.stringify(newObj), (err) => {
+        if (err) throw err;
+        console.log('Stars written to file');
+    });
+  });
+})
 
 
 app.get('/givefeedback', function(req, res) {

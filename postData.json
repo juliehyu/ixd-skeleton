@@ -67,7 +67,7 @@
 		{
 			"no":8,
 			"userID":"karen",
-			"category":"",
+			"category":"photography",
 			"image":"source/images/photo_6.jpg",
 			"question":"Should I have the tower centered?",
 			"prompt":"How is the lighting?"
@@ -75,8 +75,48 @@
 		{
 			"no":9,
 			"userID":"karen",
-			"category":"",
+			"category":"photography",
 			"image":"source/images/photo_7.jpg",
+			"question":"What do you think about the branch?",
+			"prompt":"How is the layout?"
+        },
+        {
+			"no":10,
+			"userID":"julie",
+			"category":"photography",
+			"image":"source/images/photo_8.jpg",
+			"question":"What do you think about the branch?",
+			"prompt":"How is the layout?"
+        },
+        {
+			"no":11,
+			"userID":"julie",
+			"category":"photography",
+			"image":"source/images/photo_9.jpg",
+			"question":"What do you think about the branch?",
+			"prompt":"How is the layout?"
+        },
+        {
+			"no":12,
+			"userID":"julie",
+			"category":"photography",
+			"image":"source/images/photo_10.jpg",
+			"question":"What do you think about the branch?",
+			"prompt":"How is the layout?"
+        },
+        {
+			"no":13,
+			"userID":"julie",
+			"category":"illustration",
+			"image":"source/images/illustration_3.jpg",
+			"question":"What do you think about the branch?",
+			"prompt":"How is the layout?"
+		},
+        {
+			"no":14,
+			"userID":"julie",
+			"category":"illustration",
+			"image":"source/images/illustration_4.jpg",
 			"question":"What do you think about the branch?",
 			"prompt":"How is the layout?"
 		}

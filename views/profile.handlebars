@@ -15,14 +15,33 @@
 <body>
 <div>
 	{{> topnav}}
+	<div class="shiftDown"></div>
 	<h1 class="title">My Posts</h1>
-	{{#if empty}}
-		<div>You don't have any post yet.</div>
-	{{/if}}
-	{{#each userPosts}}
+
+	<h2>Photography</h2>
+	{{#each userPostsP}}
 		<div id={{no}}>
 			<img class="upload-wrapper" src={{image}}>
-			<p class = "uploadQuestion">{{category}}</p>
+			<p class = "uploadQuestion">{{question}}</p>
+			<p class = "uploadQuestion">{{prompt}}</p>
+		</div>
+	{{/each}}
+
+
+	<h2>Illustration</h2>
+	{{#each userPostsI}}
+		<div id={{no}}>
+			<img class="upload-wrapper" src={{image}}>
+			<p class = "uploadQuestion">{{question}}</p>
+			<p class = "uploadQuestion">{{prompt}}</p>
+		</div>
+	{{/each}}
+		
+
+	<h2>Graphic Desgign</h2>
+	{{#each userPostsG}}
+		<div id={{no}}>
+			<img class="upload-wrapper" src={{image}}>
 			<p class = "uploadQuestion">{{question}}</p>
 			<p class = "uploadQuestion">{{prompt}}</p>
 		</div>
