@@ -61,16 +61,60 @@ h2 {
 	height: 3rem;
 }
 
-.card-text{
-	margin-top: 5rem;
-	width: 160px;
-}
-
-
-
-
 
 .ratingSubmit button{
 	position: relative;
 	margin-top: 5px;
+}
+
+.receivedStars {
+    display: flex;
+	justify-content: space-between;
+	width: 20rem;
+	align-items: center;
+}
+
+.receivedStars i{
+	margin-left: 0.5rem;
+	color: green;
+}
+
+.card-body {
+	width: 23rem;
+}
+
+#popoverSent {
+	position: absolute;
+	left: 300px;
+}
+
+#popoverReceived {
+	position: absolute;
+	left: 340px;
+}
+/* PageA only */
+.ratingA {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.ratingA i{
+	position: relative;
+	top: 10px;
+	width: 10px;
+    height: 10px;
+}
+
+.givenStars {
+	width: 20rem;
+	display: flex;
+	justify-content: right;
+}
+.givenStars {
+	margin-left: 13rem;
+}
+.givenStars i {
+	margin-left: 0.5rem;
+	color: red;
 }

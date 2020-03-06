@@ -15,14 +15,16 @@ function initializePage() {
     $(".5star").click(changeTo5Star);
     $(".adding").click(add);
     $(".subtracting").click(minus);
+
+    $('[data-toggle="popover"]').popover();
     // $(".submitBtn").click(submitEvent);
 }
 
 
 function add(){
-    var starItem = $(this).parents('.rating').find('h5')
+    var starItem = $(this).parents('.ratingA').find('h5')
     var currentStar = starItem.text();
-    var starInput = $(this).parents('.rating').parents('#rateFB').find('#hiddenStars');
+    var starInput = $(this).parents('.ratingA').parents('#rateFB').find('#hiddenStars');
     if (currentStar != maxCount){
         currentStar++;
         starItem.text(currentStar);
@@ -32,9 +34,9 @@ function add(){
 }
 
 function minus(){
-    var starItem = $(this).parents('.rating').find('h5')
+    var starItem = $(this).parents('.ratingA').find('h5')
     var currentStar = starItem.text();
-    var starInput = $(this).parents('.rating').parents('#rateFB').find('#hiddenStars');
+    var starInput = $(this).parents('.ratingA').parents('#rateFB').find('#hiddenStars');
 	if (currentStar != minCount){
         currentStar--;
         starItem.text(currentStar);

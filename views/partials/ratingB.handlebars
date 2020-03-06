@@ -7,6 +7,11 @@
                         <img src={{image}} class="works2" alt="...">
                     </div>
                     <div class="card-body">
+                        {{#if rated}}
+                        <div class="givenStars">
+                        <p><i class="fas fa-star"></i>{{stars}}<i class="far fa-arrow-alt-circle-right"></i></p>
+                        </div>
+                        {{else}}
                         <form id="rateFB" role="form" method="get" action="/addStars">
                             <div class="rating">
                                 <button class="btn myBtn dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown"><i class="fas fa-star" style="color: white"></i> -- </button>
@@ -26,6 +31,7 @@
                                 </button>
                             </div>     
                         </form>
+                        {{/if}}
                         <p class="card-text">{{questionResp}}</p>
                     </div>
                 </div>
