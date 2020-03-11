@@ -20,6 +20,7 @@ br {
 }
 h1 {
     font-family: "Montserrat";
+    text-align: center;
 }
 
 h2 {
@@ -291,9 +292,6 @@ form {
 
 form #submit{
     margin: auto;
-}
-h1{
-    text-align: center;
 }
 
 /* For link */

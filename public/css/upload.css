@@ -47,4 +47,6 @@ label {
 	position: absolute;
 	top: 360px;
 	left: 260px;
+	border: none;
+	background: none;
 }

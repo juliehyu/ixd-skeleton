@@ -1,4 +1,6 @@
-
+h1 {
+	margin-bottom: 0;
+}
 h2 {
 	font-family: "Montserrat"
 }
@@ -84,13 +86,15 @@ h2 {
 }
 
 #popoverSent {
-	position: absolute;
+	position: relative;
 	left: 300px;
+	top: -20px;
 }
 
 #popoverReceived {
-	position: absolute;
+	position: relative;
 	left: 340px;
+	top: -20px;
 }
 /* PageA only */
 .ratingA {

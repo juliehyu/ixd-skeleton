@@ -39,11 +39,12 @@
 	</ul>
 	<div class="tab-content" id="pills-tabContent">
 	  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+		<h1 class="title">Sent History</h1>
+		
 		<div id="popoverSent">
 		<button type="button" data-toggle="popover" data-trigger="focus" title="What is sent history?" data-placement="left" data-content="These is the list of feedback you've given to others before."><i class="fas fa-info-circle"></i></button>
-		</div>
-		<h1 class="title">Sent History</h1>
-		  	
+		</div>	
+
 		  	<h2>Photography</h2>
 		  	<div id="accordionP">
 			{{#each givenP}}
@@ -140,10 +141,13 @@
 	  </div>
 
 	  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-	  	<div id="popoverReceived">
-		<button type="button" data-toggle="popover" data-trigger="focus" title="What is received history?" data-placement="left" data-content="These is the list of feedback you got from others. Please go ahead an rate the feedbacks."><i class="fas fa-info-circle"></i></button>
-		</div>
-		<h1 class="title">Recieved History</h1>
+	  <h1 class="title">Recieved History</h1>
+
+	  <div id="popoverReceived">
+	  <button type="button" data-toggle="popover" data-trigger="focus" title="What is received history?" data-placement="left" data-content="These is the list of feedback you got from others. Please go ahead an rate the feedbacks."><i class="fas fa-info-circle"></i></button>
+	  </div>
+
+
 		<h2>Photography</h2>
 		{{#if showPageA}} 
 			{{#each receivedP}}

@@ -16,6 +16,7 @@ var givefeedback = require('./routes/givefeedback');
 var profile = require('./routes/profile');
 var history = require('./routes/history');
 var upload = require('./routes/upload');
+var createaccount = require('./routes/createaccount');
 
 
 // Example route
@@ -53,6 +54,7 @@ app.get('/profile', profile.view);
 app.get('/history', history.view);
 app.get('/pageA', history.pageA);
 app.get('/upload', upload.view);
+app.get('/createaccount', createaccount.view);
 
 // app.get('/uploadPost', upload.uploadPost);
 // app.get('/updateCategory', upload.updateCategory);
