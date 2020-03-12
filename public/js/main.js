@@ -16,7 +16,7 @@ function initializePage() {
     var current = $("#0");
     current.attr('class', 'carousel-item active');
 
-    var link = $("#linkToGiveFeedback");
+    var link = $(".linkToGiveFeedback");
     var newLink = '/givefeedback/0';
     link.attr('href', newLink);
 
@@ -56,7 +56,7 @@ function changeActive(e) {
         newPost.attr('class', 'carousel-item active');
         var newPostId = newPost.attr('id');
 
-        var link = $("#linkToGiveFeedback");
+        var link = $(".linkToGiveFeedback");
         var newLink = '/givefeedback/' + newPostId;
         link.attr('href', newLink);
     }
@@ -66,6 +66,11 @@ function changeToPhotography(e) {
     e.preventDefault();
     var current = $("#0");
     current.attr('class', 'carousel-item active');
+
+
+    var link = $(".linkToGiveFeedback");
+    var newLink = '/givefeedback/0';
+    link.attr('href', newLink);
 
     $("#dropdown").html("Photography");
     $('#P').show();
@@ -79,6 +84,10 @@ function changeToIllustration(e) {
     var current = $("#3");
     current.attr('class', 'carousel-item active');
 
+    var link = $(".linkToGiveFeedback");
+    var newLink = '/givefeedback/3';
+    link.attr('href', newLink);
+
     $("#dropdown").html("Illustration");
     $('#P').hide();
     $('#I').show();
@@ -90,6 +99,10 @@ function changeToGraphicdesign(e) {
     e.preventDefault();
     var current = $("#4");
     current.attr('class', 'carousel-item active');
+
+    var link = $(".linkToGiveFeedback");
+    var newLink = '/givefeedback/4';
+    link.attr('href', newLink);
 
     $('#P').hide();
     $('#I').hide();
